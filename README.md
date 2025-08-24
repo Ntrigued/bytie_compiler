@@ -1,3 +1,7 @@
+# Bytie Compiler
+
+> **Note**: The initial version of this code was almost completely created by OpenAI Agent Mode.
+
 # Bytie Language Interpreter
 
 This repository contains an implementation of the **Bytie** programming
