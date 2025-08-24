@@ -109,9 +109,3 @@ named `debug.txt`.  Increasing the number of `v`s increases the
 verbosity of the log.  Debug logs include information such as
 variable declarations, control flow decisions and function calls.  The
 log can be useful when debugging your own Bytie programs.
-
-## License
-
-This project is provided for educational purposes and does not carry a
-specific license.  Feel free to experiment with the interpreter and
-the example programs.
