@@ -1,0 +1,11 @@
+# Map of Maps
+retrieve print from Standard;
+
+Map<Map<Integer>> table = {
+  "row1": {"c1": 1, "c2": 2},
+  "row2": {"c1": 3, "c2": 4}
+};
+
+Map<Integer> row2 = table["row2"];
+Integer c2 = row2["c2"];
+print("row2.c2 = " + c2);

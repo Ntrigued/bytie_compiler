@@ -1,0 +1,26 @@
+retrieve add from "program_4"; // import the add function from the program_4.bytie file
+retrieve print from "program_4"; // As print is imported into the global scope of program_4 it is available to be imported through program_4
+
+function bad_function() -> None {
+  retrieve print from Standard; # this would throw an error if the function was invoked, because print is imported above.
+}
+function deconstructed_multiply(Integer a, Integer b) -> Integer {
+    Integer b_is_negative  = 0;
+    if(b < 0) { b_is_negative = 1; }
+
+    Integer sum = 0;
+    while(b > 0) {
+        sum = sum + a;
+    }
+
+    if(b_is_negative == 1) {
+        sum = -1 * sum;
+    }
+
+    return sum;
+}
+
+function print_sum(Double a, Double b) -> None {
+   Integer sum = add(a+0, b); // a + 0 needed to convert a to Integer,  a + 0.0 would keep it a Double;
+   print("The sum is: " + sum);
+}

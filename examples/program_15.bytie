@@ -1,0 +1,9 @@
+# simple max function (Integer)
+retrieve print from Standard;
+
+function imax(Integer x, Integer y) -> Integer {
+  if(x >= y) { return x; }
+  else { return y; }
+}
+
+print("imax: " + imax(10, -3));

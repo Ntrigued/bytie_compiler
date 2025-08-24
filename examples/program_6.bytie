@@ -1,0 +1,13 @@
+function throws_error(Double d) -> None {
+    Integer i = s_to_i(d); # this would throw an error because s_to_i only accepts an Integer
+    print("i: " + i);
+}
+
+function catch_error() -> None {
+  attempt {
+    throws_error(1.0);
+   } fix (err) /* err is of type Error */ {
+        print("The error name:: " + err.name);
+        print("The error message: " + err.message);
+   }
+}

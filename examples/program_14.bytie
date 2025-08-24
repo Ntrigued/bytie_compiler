@@ -1,0 +1,17 @@
+# error handling when converting an invalid string
+retrieve print, s_to_i from Standard;
+
+function safe_to_int(Str s) -> Integer {
+  Integer val = 0;
+  attempt {
+    val = s_to_i(s);
+  } fix (err) {
+    print("convert failed: " + err.name + " -> " + err.message);
+    val = 0;
+  }
+  return val;
+}
+
+Integer a = safe_to_int("123");
+Integer b = safe_to_int("12x");
+print("a=" + a + ", b=" + b);

@@ -1,0 +1,11 @@
+# summing numbers provided as strings
+retrieve print, s_to_i from Standard;
+
+Array<Str> ss = ["4","-2","10"];
+Integer sum = 0;
+Integer i = 0;
+while(i < 3) {
+  sum = sum + s_to_i(ss[i]);
+  i = i + 1;
+}
+print("sum = " + sum);

@@ -1,0 +1,11 @@
+# counting positives in an array
+retrieve print from Standard;
+
+Array<Integer> nums = [-3, -1, 0, 2, 5, -8, 4];
+Integer i = 0;
+Integer count = 0;
+while(i < 7) {
+  if(nums[i] > 0) { count = count + 1; }
+  i = i + 1;
+}
+print("positives: " + count);

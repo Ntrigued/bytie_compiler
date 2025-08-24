@@ -1,0 +1,8 @@
+# reuse deconstructed_multiply from program 5
+retrieve deconstructed_multiply from "program_5";
+retrieve print from Standard;
+
+Integer a = 7;
+Integer b = -4;
+Integer p = deconstructed_multiply(a, b);
+print(a + " * " + b + " = " + p);

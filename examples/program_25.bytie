@@ -1,0 +1,7 @@
+# for loop with empty init (counter predeclared)
+retrieve print from Standard;
+
+Integer i = 0;
+for(; i < 3; i = i + 1) {
+  print("i=" + i);
+}

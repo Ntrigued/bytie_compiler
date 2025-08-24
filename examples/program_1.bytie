@@ -1,0 +1,4 @@
+retrieve print from Standard; // import the print function from the standard library
+
+const Str HW = "Hello World!";
+print(HW + "!");  # prints "Hello World!" to stdout

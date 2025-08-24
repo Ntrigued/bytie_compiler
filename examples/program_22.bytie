@@ -1,0 +1,16 @@
+# demonstrate attempt/fix on wrong-typed conversion
+retrieve print, s_to_i from Standard;
+
+function must_fail() -> Integer {
+  Integer out = 0;
+  attempt {
+    out = s_to_i(1.5);  # invalid: s_to_i expects Str
+  } fix (err) {
+    print("oops: " + err.name + " :: " + err.message);
+    out = -1;
+  }
+  return out;
+}
+
+Integer r = must_fail();
+print("result: " + r);

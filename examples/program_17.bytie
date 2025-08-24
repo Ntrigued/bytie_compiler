@@ -1,0 +1,9 @@
+# countdown with while
+retrieve print from Standard;
+
+Integer t = 5;
+while(t > 0) {
+  print("t=" + t);
+  t = t - 1;
+}
+print("liftoff!");

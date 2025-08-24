@@ -1,0 +1,5 @@
+# multiple imports
+retrieve input, print, s_to_d from Standard;
+
+Double x = s_to_d(input("x? "));
+print("x doubled ~ " + (x + x));

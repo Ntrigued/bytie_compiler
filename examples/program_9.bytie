@@ -1,0 +1,8 @@
+# string building and arithmetic rules (Double rounded in Integer + Double)
+retrieve print from Standard;
+
+Integer a = 7;
+Double b = 2.9;
+Integer c = a + b;  # 7 + round(2.9) == 9
+Str msg = "a(" + a + ") + b(" + b + ") -> " + c;
+print(msg);

@@ -1,0 +1,10 @@
+# nested arrays
+retrieve print from Standard;
+
+Array<Integer> xs = [1,2,3];
+Array<Integer> ys = [4,5,6];
+Array<Array> both = [xs, ys];
+
+Array<Integer> got_xs = both[0];
+Integer sum = got_xs[0] + got_xs[1] + got_xs[2];
+print("sum xs: " + sum);

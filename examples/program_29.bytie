@@ -1,0 +1,12 @@
+# multiplication table as strings
+retrieve print from Standard;
+
+Integer a = 1;
+while(a <= 3) {
+  Integer b = 1;
+  while(b <= 3) {
+    print(a + "x" + b + "=" + (a*b));
+    b = b + 1;
+  }
+  a = a + 1;
+}

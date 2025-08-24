@@ -1,0 +1,7 @@
+# negative indexing
+retrieve print from Standard;
+
+Array<Str> letters = ["a","b","c","d","e"];
+Str last = letters[-1];
+Str second_last = letters[-2];
+print("last: " + last + ", second_last: " + second_last);

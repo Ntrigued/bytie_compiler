@@ -1,0 +1,7 @@
+# creating and inspecting an Error
+retrieve print from Standard;
+
+Error e = error("NotFound", "item missing");
+Str n = e.name;
+Str m = e.message;
+print("err=" + n + " :: " + m);

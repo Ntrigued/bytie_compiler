@@ -1,0 +1,7 @@
+# Integer/Double mix behavior
+retrieve print from Standard;
+
+Integer x = 2;
+Double y = 3.49;
+Integer z = x * y;  # 2 * round(3.49) = 2 * 3 = 6
+print("z = " + z);

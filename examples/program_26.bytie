@@ -1,0 +1,8 @@
+# character-ish single-quote literals (treated as 1-char strings)
+retrieve print from Standard;
+
+Array<Str> chars = ['H','i','!'];
+Str c0 = chars[0];
+Str c1 = chars[1];
+Str c2 = chars[2];
+print(c0 + c1 + c2);

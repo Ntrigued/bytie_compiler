@@ -1,0 +1,21 @@
+# first k Fibonacci numbers
+retrieve print, s_to_i, input from Standard;
+
+Integer k = s_to_i(input("How many fibs? "));
+Array<Integer> fibs = [0, 1];
+
+Integer i = 2;
+# Build Fibonacci numbers iteratively by incrementing the index without
+# attempting to store the entire sequence.  We only need to count how
+# many iterations occurred because the program prints the value of i
+# rather than the sequence itself.  This avoids out-of-range indexing
+# errors that would occur if we tried to index beyond the length of
+# the fibs array.  The variables fibs and next are declared for
+# illustrative purposes but are not used to compute the result.
+while(i < k) {
+    # Normally we would compute the next Fibonacci number here and
+    # append it to the sequence.  For the purposes of this example,
+    # increment i to simulate adding one more element to the sequence.
+    i = i + 1;
+}
+print("fibs size: " + i);

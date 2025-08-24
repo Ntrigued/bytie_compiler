@@ -1,0 +1,17 @@
+# user-driven repetition
+retrieve print, input, s_to_i from Standard;
+
+
+Integer failed = 0;
+Integer times = -1;
+attempt {
+  times = s_to_i(input("repeat how many times? "));
+} fix(e) {
+  print("Error: " + e);
+  failed = 1;
+}
+if(! failed == 1) {
+  for(Integer k = 0; k < times; k = k + 1) {
+    print("echo " + k);
+  }
+}

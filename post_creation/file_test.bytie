@@ -1,0 +1,14 @@
+retrieve open_file, read_file, write_file, close_file, delete_file from Standard_IO;
+retrieve print from Standard;
+
+Integer file_no = open_file('file_text.txt', 'a');
+
+String data = "Here is some multi-line string data:\nEtc.\nEtc.\n\nABC\b\bxyz\b!😊";
+write_file(file_no, data);
+close_file(file_no);
+
+Integer file_no2 = open_file('file_text.txt', 'r');
+String file_data = read_file(file_no2);
+print(file_data);
+delete_file("file_text.txt");
+close_file(file_no);

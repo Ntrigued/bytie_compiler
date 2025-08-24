@@ -1,0 +1,41 @@
+retrieve convert_t, s_to_i, s_to_d from Standard
+
+Integer num = -10;
+Double db_num = 1.3459;
+Str s = "Some ch@arcters in a str1ng! 😊";
+# Str s = "another string"; # this would fail because s is already defined
+const Double pi = 3.14159;
+Integer sum = num + pi; # Integer <math_operation> Double becomes Integer, Double is first rounded to nearest integer. So sum is -10 + 3 = -7
+Str s2 = num + s + pi;  #   performing a math operation between any other type and a str first convert the other type to a string. So s2 is (-10 -> "-10") + "Some ch@arcters in a str1ng! 😊" + (3.14159 -> "3.14159") =  "-10Some ch@arcters in a str1ng! 😊3.14159"
+
+Error e = error("error_name", "error_message"); # error(Str, Str) -> Error, the error message may be ""
+Str err_name = e.name;
+Str err_message = e.message;
+
+# Arrays can be of any other type (including array)
+Array<Str> arr_s = ['a', 'B', '<', '3.1', "avc", "😉",  '😉😉'];
+Array<Int> arr_i = [1, -123, 54145, 12349812347129];
+Array<Array> arr_a = [arr_s, arr_i];
+# If Array<Array>, VM will check at runtime that the retrieved Array type matches what its assigned to
+Array<Int> another_ref_to_arr_i = arr_a[1];
+Array<Str> another_ref_to_arr_s = arr_a[0];
+Array<Int> another_ref_to_arr_i2 = arr_a[-1]; # gets the last item in the array
+Array<Str> another_ref_to_arr_s2 = arr_a[0];
+Array<Str> third_ref_to_arr_s = arr_a[-2]; # gets the second to last item in the array
+# Array<Int> another_ref_to_arr_i = arr_a[2]; # throws error, because the array only has 2 elements
+# Array<Str> another_ref_to_arr_s = arr_a[-3]; # throws error because the array only has 2 elements
+
+Map<Array<Int>> m = {"key1": [1,2,3], "key2": [-123, 34253443852345, 234209]};
+Array<Int> val1 = m["key1"];
+
+Integer i = s_to_i("1");  # i = 1
+Double d = s_to_d("1.0");  # d = 1.0
+# convert value "2.0" from Str to Double: Target type Double, source type Str
+d = convert_t(Double, Str, "2.0");
+# can't convert between Error and any other type, will throw error
+# can't convert between map and any other type, will throw error
+
+# can't convert between Array and any other type EXCEPT Array<Str> <-> Str
+Array<Str> arr_str = ['a', "b", 'c'];
+Str  str_from_arr = convert(Str, Array<Str>, arr_str); # convert array to string: "abc"
+Array<Str> arr_from_str = convert(Array<Str>, Str, "wx.y z"); # convert string to array: ["w", "x", ".", "y", " ", "z"]

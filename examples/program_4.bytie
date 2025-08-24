@@ -1,0 +1,5 @@
+retrieve print from Standard;
+
+function add(Integer a, Double b) -> Integer {
+    return a + b;
+}

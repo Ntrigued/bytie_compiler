@@ -1,0 +1,9 @@
+# sum 1..n via for-loop
+retrieve print, s_to_i, input from Standard;
+
+Integer n = s_to_i(input("n? "));
+Integer acc = 0;
+for(Integer i = 1; i <= n; i = i + 1) {
+  acc = acc + i;
+}
+print("sum(1.." + n + ") = " + acc);

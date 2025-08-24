@@ -1,0 +1,9 @@
+# procedure-style function (-> None)
+retrieve print from Standard;
+
+function banner(Str s) -> None {
+  print("=== " + s + " ===");
+}
+
+banner("Bytie");
+banner("Rocks");
