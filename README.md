@@ -1,6 +1,12 @@
 # Bytie Compiler
 
-> **Note**: The initial version of this code was almost completely created by OpenAI Agent Mode.
+> **Note**: The initial version of this code was almost completely created through a series of prompts asking ChatGPT to iteratively build:
+> -  a grammar, based on a set of around 5 provided example programs (hand-written by a human)
+> - a larger set of around 25 example programs based on the hand-written sample and grammar
+> - a specification for a virtual machine that could run the entire 30 programs.
+> culminating in a prompt to OpenAI Agent Mode to create the compiler in one-shot based on the grammar, 30 example programs, and VM specification.
+>
+> The compiler that the agent returned was almost completely functional, but I did re-arrange some things, added the post_creation/ directory, and the std/io directories before the first commit.
 
 # Bytie Language Interpreter
 
@@ -17,9 +23,13 @@ library are implemented entirely in Python.
   type system and built‑ins.  The entry point is in
   `bytie/__main__.py`, which makes the package runnable with
   `python -m bytie`.
+- `bytie/std/` – Standard library modules including:
+  - `bytie/std/io/` – File I/O operations module
 - `examples/` – A collection of example programs (`program_1.bytie`
   through `program_31.bytie`) demonstrating language features.  These
   are the same examples referenced in the specification.
+- `post_creation/` – Additional example programs created after the initial
+  implementation, including file I/O examples.
 - `tests/` – A comprehensive test suite using `pytest` which
   exercises the interpreter and all example programs.  Each program
   has its own test file along with additional subsystem tests.
@@ -46,17 +56,36 @@ python -m bytie -vvv examples/program_7.bytie
 
 ## Standard Library
 
-The standard library is automatically available via the special
-module name `Standard`.  Common built‑ins such as `print`, `input`,
-`s_to_i`, `s_to_d`, `convert_t`, `convert` and `error` are provided.
-The `error` and `convert` functions are also available without an
-explicit `retrieve` statement so that example programs which call
-`error("name", "message")` or `convert(...)` directly will work as
-written.  Other built‑ins must be imported with `retrieve`:
+The standard library is automatically available via two special module names:
+
+### Standard Module
+The `Standard` module provides common built‑ins such as `print`, `input`,
+`s_to_i`, `s_to_d`, `convert_t`, `convert`, `mod`, and `error`.  The `error` 
+and `convert` functions are also available without an explicit `retrieve` statement 
+so that example programs which call `error("name", "message")` or `convert(...)` 
+directly will work as written.  Other built‑ins must be imported with `retrieve`:
 
 ```byt
 retrieve print, s_to_i from Standard;
 print("hello");
+```
+
+### Standard.IO Module
+The `Standard_IO` module provides comprehensive file I/O operations:
+
+- **File Management**: `open_file(filename, mode)`, `close_file(fileno)`, `delete_file(filename)`
+- **File Operations**: `read_file(fileno)`, `write_file(fileno, data)`
+- **File Manipulation**: `rename_file(old_name, new_name)`, `copy_file(source, dest)`, `move_file(source, dest)`
+- **File Information**: `file_exists(filename)`
+
+Example usage:
+```byt
+retrieve open_file, read_file, write_file, close_file from Standard_IO;
+retrieve print from Standard;
+
+Integer file_no = open_file('test.txt', 'w');
+write_file(file_no, "Hello, World!");
+close_file(file_no);
 ```
 
 ## Testing
