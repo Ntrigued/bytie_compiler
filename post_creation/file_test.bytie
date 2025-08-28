@@ -1,14 +1,26 @@
 retrieve open_file, read_file, write_file, close_file, delete_file from Standard_IO;
-retrieve print from Standard;
+retrieve print, convert_t from Standard;
 
-Integer file_no = open_file('file_text.txt', 'a');
+function write_and_close(String filename, String data) -> None {
+  Integer file_no = open_file(filename, 'w');
+  write_file(file_no, data);
+  close_file(file_no);
+}
+
+function read_and_close(String filename) -> String {
+  Integer file_no = open_file(filename, 'r');
+  String data = read_file(file_no);
+  close_file(file_no);
+  return data;
+}
 
 String data = "Here is some multi-line string data:\nEtc.\nEtc.\n\nABC\b\bxyz\b!😊";
-write_file(file_no, data);
-close_file(file_no);
-
-Integer file_no2 = open_file('file_text.txt', 'r');
-String file_data = read_file(file_no2);
+write_and_close('file_text.txt', data);
+String file_data = read_and_close('file_text.txt');
 print(file_data);
+
+write_and_close('file_text.txt', convert_t(String, Integer, 234))
+String file_data = read_and_close('file_text.txt');
+print(file_data);
+
 delete_file("file_text.txt");
-close_file(file_no);
