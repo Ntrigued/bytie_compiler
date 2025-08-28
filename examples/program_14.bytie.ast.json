@@ -1,0 +1,262 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "safe_to_int",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Str",
+              "args": []
+            }
+          },
+          "name": "s"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "val",
+            "expr": {
+              "type": "Literal",
+              "value": 0,
+              "literal_type": "Integer"
+            },
+            "is_const": false
+          },
+          {
+            "type": "AttemptStmt",
+            "try_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "val"
+                    },
+                    "value": {
+                      "type": "Call",
+                      "func": {
+                        "type": "Ident",
+                        "name": "s_to_i"
+                      },
+                      "args": [
+                        {
+                          "type": "Ident",
+                          "name": "s"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "err_name": "err",
+            "catch_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "BinaryOp",
+                          "op": "+",
+                          "left": {
+                            "type": "BinaryOp",
+                            "op": "+",
+                            "left": {
+                              "type": "Literal",
+                              "value": "convert failed: ",
+                              "literal_type": "Str"
+                            },
+                            "right": {
+                              "type": "Member",
+                              "target": {
+                                "type": "Ident",
+                                "name": "err"
+                              },
+                              "name": "name"
+                            }
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": " -> ",
+                            "literal_type": "Str"
+                          }
+                        },
+                        "right": {
+                          "type": "Member",
+                          "target": {
+                            "type": "Ident",
+                            "name": "err"
+                          },
+                          "name": "message"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "val"
+                    },
+                    "value": {
+                      "type": "Literal",
+                      "value": 0,
+                      "literal_type": "Integer"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ReturnStmt",
+            "value": {
+              "type": "Ident",
+              "name": "val"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "a",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "safe_to_int"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "123",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "b",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "safe_to_int"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "12x",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "a=",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "a"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": ", b=",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "b"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

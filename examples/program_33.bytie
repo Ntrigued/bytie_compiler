@@ -1,0 +1,3 @@
+retrieve print, convert_t from Standard;
+
+print(convert_t(Double, String, "2.0"));

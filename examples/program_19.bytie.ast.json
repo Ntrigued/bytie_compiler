@@ -1,0 +1,95 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "x",
+      "expr": {
+        "type": "Literal",
+        "value": 2,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "y",
+      "expr": {
+        "type": "Literal",
+        "value": 3.49,
+        "literal_type": "Double"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "z",
+      "expr": {
+        "type": "BinaryOp",
+        "op": "*",
+        "left": {
+          "type": "Ident",
+          "name": "x"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "y"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "z = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "z"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

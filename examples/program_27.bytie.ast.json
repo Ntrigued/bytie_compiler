@@ -1,0 +1,125 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Error",
+          "args": []
+        }
+      },
+      "name": "e",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "error"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "NotFound",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "item missing",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "n",
+      "expr": {
+        "type": "Member",
+        "target": {
+          "type": "Ident",
+          "name": "e"
+        },
+        "name": "name"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "m",
+      "expr": {
+        "type": "Member",
+        "target": {
+          "type": "Ident",
+          "name": "e"
+        },
+        "name": "message"
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "err=",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "n"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": " :: ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "m"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

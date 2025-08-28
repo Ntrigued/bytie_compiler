@@ -1,0 +1,109 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "banner",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Str",
+              "args": []
+            }
+          },
+          "name": "s"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "None",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "=== ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "s"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " ===",
+                    "literal_type": "Str"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "banner"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Bytie",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "banner"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Rocks",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    }
+  ]
+}

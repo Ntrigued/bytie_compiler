@@ -1,0 +1,135 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "imax",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "x"
+        },
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "y"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "IfStmt",
+            "condition": {
+              "type": "BinaryOp",
+              "op": ">=",
+              "left": {
+                "type": "Ident",
+                "name": "x"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "y"
+              }
+            },
+            "then_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ReturnStmt",
+                  "value": {
+                    "type": "Ident",
+                    "name": "x"
+                  }
+                }
+              ]
+            },
+            "else_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ReturnStmt",
+                  "value": {
+                    "type": "Ident",
+                    "name": "y"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "imax: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "imax"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 10,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "UnaryOp",
+                  "op": "-",
+                  "operand": {
+                    "type": "Literal",
+                    "value": 3,
+                    "literal_type": "Integer"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

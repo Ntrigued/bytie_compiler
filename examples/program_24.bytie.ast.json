@@ -1,0 +1,82 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "input",
+        "print",
+        "s_to_d"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "x",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_d"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "input"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": "x? ",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "x doubled ~ ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Ident",
+                "name": "x"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "x"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

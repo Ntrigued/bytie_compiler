@@ -1,0 +1,67 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "add",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "a"
+        },
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Double",
+              "args": []
+            }
+          },
+          "name": "b"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ReturnStmt",
+            "value": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Ident",
+                "name": "a"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "b"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

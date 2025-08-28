@@ -1,0 +1,115 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "t",
+      "expr": {
+        "type": "Literal",
+        "value": 5,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "WhileStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": ">",
+        "left": {
+          "type": "Ident",
+          "name": "t"
+        },
+        "right": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "t=",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "t"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "t"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "-",
+                "left": {
+                  "type": "Ident",
+                  "name": "t"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "liftoff!",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    }
+  ]
+}

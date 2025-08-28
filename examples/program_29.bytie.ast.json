@@ -1,0 +1,192 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "a",
+      "expr": {
+        "type": "Literal",
+        "value": 1,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "WhileStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": "<=",
+        "left": {
+          "type": "Ident",
+          "name": "a"
+        },
+        "right": {
+          "type": "Literal",
+          "value": 3,
+          "literal_type": "Integer"
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "b",
+            "expr": {
+              "type": "Literal",
+              "value": 1,
+              "literal_type": "Integer"
+            },
+            "is_const": false
+          },
+          {
+            "type": "WhileStmt",
+            "condition": {
+              "type": "BinaryOp",
+              "op": "<=",
+              "left": {
+                "type": "Ident",
+                "name": "b"
+              },
+              "right": {
+                "type": "Literal",
+                "value": 3,
+                "literal_type": "Integer"
+              }
+            },
+            "body": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "BinaryOp",
+                          "op": "+",
+                          "left": {
+                            "type": "BinaryOp",
+                            "op": "+",
+                            "left": {
+                              "type": "BinaryOp",
+                              "op": "+",
+                              "left": {
+                                "type": "Ident",
+                                "name": "a"
+                              },
+                              "right": {
+                                "type": "Literal",
+                                "value": "x",
+                                "literal_type": "Str"
+                              }
+                            },
+                            "right": {
+                              "type": "Ident",
+                              "name": "b"
+                            }
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": "=",
+                            "literal_type": "Str"
+                          }
+                        },
+                        "right": {
+                          "type": "BinaryOp",
+                          "op": "*",
+                          "left": {
+                            "type": "Ident",
+                            "name": "a"
+                          },
+                          "right": {
+                            "type": "Ident",
+                            "name": "b"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "b"
+                    },
+                    "value": {
+                      "type": "BinaryOp",
+                      "op": "+",
+                      "left": {
+                        "type": "Ident",
+                        "name": "b"
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 1,
+                        "literal_type": "Integer"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "a"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "a"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

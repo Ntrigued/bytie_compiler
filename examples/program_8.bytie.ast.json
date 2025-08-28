@@ -1,0 +1,166 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i",
+        "input"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "k",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_i"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "input"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": "How many fibs? ",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "fibs",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": 0,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 1,
+            "literal_type": "Integer"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "i",
+      "expr": {
+        "type": "Literal",
+        "value": 2,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "WhileStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": "<",
+        "left": {
+          "type": "Ident",
+          "name": "i"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "k"
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "i"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "i"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "fibs size: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "i"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

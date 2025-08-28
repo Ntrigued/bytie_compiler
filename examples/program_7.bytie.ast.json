@@ -1,0 +1,235 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i",
+        "input"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "fact",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "n"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "res",
+            "expr": {
+              "type": "Literal",
+              "value": 1,
+              "literal_type": "Integer"
+            },
+            "is_const": false
+          },
+          {
+            "type": "WhileStmt",
+            "condition": {
+              "type": "BinaryOp",
+              "op": ">",
+              "left": {
+                "type": "Ident",
+                "name": "n"
+              },
+              "right": {
+                "type": "Literal",
+                "value": 1,
+                "literal_type": "Integer"
+              }
+            },
+            "body": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "res"
+                    },
+                    "value": {
+                      "type": "BinaryOp",
+                      "op": "*",
+                      "left": {
+                        "type": "Ident",
+                        "name": "res"
+                      },
+                      "right": {
+                        "type": "Ident",
+                        "name": "n"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "n"
+                    },
+                    "value": {
+                      "type": "BinaryOp",
+                      "op": "-",
+                      "left": {
+                        "type": "Ident",
+                        "name": "n"
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 1,
+                        "literal_type": "Integer"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ReturnStmt",
+            "value": {
+              "type": "Ident",
+              "name": "res"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "n",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_i"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "input"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": "n? ",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "f",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "fact"
+        },
+        "args": [
+          {
+            "type": "Ident",
+            "name": "n"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "fact(",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "n"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": ") = ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "f"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

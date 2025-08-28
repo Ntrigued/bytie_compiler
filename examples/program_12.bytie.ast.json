@@ -1,0 +1,157 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "letters",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": "a",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "b",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "c",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "d",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "e",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "last",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "letters"
+        },
+        "index": {
+          "type": "UnaryOp",
+          "op": "-",
+          "operand": {
+            "type": "Literal",
+            "value": 1,
+            "literal_type": "Integer"
+          }
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "second_last",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "letters"
+        },
+        "index": {
+          "type": "UnaryOp",
+          "op": "-",
+          "operand": {
+            "type": "Literal",
+            "value": 2,
+            "literal_type": "Integer"
+          }
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "last: ",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "last"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": ", second_last: ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "second_last"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

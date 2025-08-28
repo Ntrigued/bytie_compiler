@@ -1,0 +1,187 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i",
+        "input"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "n",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_i"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "input"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": "n? ",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "acc",
+      "expr": {
+        "type": "Literal",
+        "value": 0,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "ForStmt",
+      "init": {
+        "type": "VarDecl",
+        "type_spec": {
+          "__type__": "TypeSpec",
+          "value": {
+            "kind": "Integer",
+            "args": []
+          }
+        },
+        "name": "i",
+        "expr": {
+          "type": "Literal",
+          "value": 1,
+          "literal_type": "Integer"
+        },
+        "is_const": false
+      },
+      "condition": {
+        "type": "BinaryOp",
+        "op": "<=",
+        "left": {
+          "type": "Ident",
+          "name": "i"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "n"
+        }
+      },
+      "post": {
+        "type": "Assign",
+        "target": {
+          "type": "Ident",
+          "name": "i"
+        },
+        "value": {
+          "type": "BinaryOp",
+          "op": "+",
+          "left": {
+            "type": "Ident",
+            "name": "i"
+          },
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "literal_type": "Integer"
+          }
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "acc"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "acc"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "i"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "sum(1..",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "n"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": ") = ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "acc"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

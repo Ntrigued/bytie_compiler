@@ -1,0 +1,54 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "HW",
+      "expr": {
+        "type": "Literal",
+        "value": "Hello World!",
+        "literal_type": "Str"
+      },
+      "is_const": true
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Ident",
+              "name": "HW"
+            },
+            "right": {
+              "type": "Literal",
+              "value": "!",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

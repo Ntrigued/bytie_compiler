@@ -1,0 +1,190 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "input",
+        "print",
+        "s_to_i"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "i",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_i"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "input"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": "Enter a number",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "IfStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": ">=",
+        "left": {
+          "type": "Ident",
+          "name": "i"
+        },
+        "right": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "then_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ForStmt",
+            "init": {
+              "type": "VarDecl",
+              "type_spec": {
+                "__type__": "TypeSpec",
+                "value": {
+                  "kind": "Integer",
+                  "args": []
+                }
+              },
+              "name": "j",
+              "expr": {
+                "type": "Literal",
+                "value": 0,
+                "literal_type": "Integer"
+              },
+              "is_const": false
+            },
+            "condition": {
+              "type": "BinaryOp",
+              "op": "<",
+              "left": {
+                "type": "Ident",
+                "name": "j"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "i"
+              }
+            },
+            "post": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "j"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "j"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            },
+            "body": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "VarDecl",
+                  "type_spec": {
+                    "__type__": "TypeSpec",
+                    "value": {
+                      "kind": "Integer",
+                      "args": []
+                    }
+                  },
+                  "name": "a",
+                  "expr": {
+                    "type": "Ident",
+                    "name": "j"
+                  },
+                  "is_const": false
+                },
+                {
+                  "type": "WhileStmt",
+                  "condition": {
+                    "type": "BinaryOp",
+                    "op": ">",
+                    "left": {
+                      "type": "Ident",
+                      "name": "a"
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": 0,
+                      "literal_type": "Integer"
+                    }
+                  },
+                  "body": {
+                    "type": "Block",
+                    "statements": [
+                      {
+                        "type": "ExprStmt",
+                        "expr": {
+                          "type": "Call",
+                          "func": {
+                            "type": "Ident",
+                            "name": "print"
+                          },
+                          "args": [
+                            {
+                              "type": "BinaryOp",
+                              "op": "+",
+                              "left": {
+                                "type": "Literal",
+                                "value": "a: ",
+                                "literal_type": "Str"
+                              },
+                              "right": {
+                                "type": "Ident",
+                                "name": "a"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "else_block": null
+    }
+  ]
+}

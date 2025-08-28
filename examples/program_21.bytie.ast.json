@@ -1,0 +1,165 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Map",
+              "args": [
+                {
+                  "kind": "Integer",
+                  "args": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "name": "table",
+      "expr": {
+        "type": "MapLit",
+        "entries": [
+          [
+            "row1",
+            {
+              "type": "MapLit",
+              "entries": [
+                [
+                  "c1",
+                  {
+                    "type": "Literal",
+                    "value": 1,
+                    "literal_type": "Integer"
+                  }
+                ],
+                [
+                  "c2",
+                  {
+                    "type": "Literal",
+                    "value": 2,
+                    "literal_type": "Integer"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "row2",
+            {
+              "type": "MapLit",
+              "entries": [
+                [
+                  "c1",
+                  {
+                    "type": "Literal",
+                    "value": 3,
+                    "literal_type": "Integer"
+                  }
+                ],
+                [
+                  "c2",
+                  {
+                    "type": "Literal",
+                    "value": 4,
+                    "literal_type": "Integer"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "row2",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "table"
+        },
+        "index": {
+          "type": "Literal",
+          "value": "row2",
+          "literal_type": "Str"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "c2",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "row2"
+        },
+        "index": {
+          "type": "Literal",
+          "value": "c2",
+          "literal_type": "Str"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "row2.c2 = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "c2"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1039,7 +1039,18 @@ class Interpreter:
         if isinstance(node, Literal):
             return node.value
         if isinstance(node, Ident):
-            return env.get(node.name)
+            # Treat builtin type names as type literals so they can be passed
+            # as arguments (e.g., convert_t(Double, String, "2.0")).
+            name = node.name
+            synonyms = {
+                'Int': 'Integer',
+                'String': 'Str',
+            }
+            canonical = synonyms.get(name, name)
+            builtin_type_names = {'Integer', 'Double', 'Str', 'Array', 'Map', 'Error', 'None'}
+            if canonical in builtin_type_names:
+                return TypeSpec(canonical)
+            return env.get(name)
         if isinstance(node, ArrayLit):
             # Evaluate elements and create array with dynamic type spec
             # Determine element type from declared variable or from context; here we don't know declared type

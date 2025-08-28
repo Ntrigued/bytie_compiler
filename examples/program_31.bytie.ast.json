@@ -1,0 +1,247 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "input",
+        "s_to_i"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "failed",
+      "expr": {
+        "type": "Literal",
+        "value": 0,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "times",
+      "expr": {
+        "type": "UnaryOp",
+        "op": "-",
+        "operand": {
+          "type": "Literal",
+          "value": 1,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "AttemptStmt",
+      "try_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "times"
+              },
+              "value": {
+                "type": "Call",
+                "func": {
+                  "type": "Ident",
+                  "name": "s_to_i"
+                },
+                "args": [
+                  {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "input"
+                    },
+                    "args": [
+                      {
+                        "type": "Literal",
+                        "value": "repeat how many times? ",
+                        "literal_type": "Str"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "err_name": "e",
+      "catch_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Error: ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "e"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "failed"
+              },
+              "value": {
+                "type": "Literal",
+                "value": 1,
+                "literal_type": "Integer"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "IfStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": "==",
+        "left": {
+          "type": "UnaryOp",
+          "op": "!",
+          "operand": {
+            "type": "Ident",
+            "name": "failed"
+          }
+        },
+        "right": {
+          "type": "Literal",
+          "value": 1,
+          "literal_type": "Integer"
+        }
+      },
+      "then_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ForStmt",
+            "init": {
+              "type": "VarDecl",
+              "type_spec": {
+                "__type__": "TypeSpec",
+                "value": {
+                  "kind": "Integer",
+                  "args": []
+                }
+              },
+              "name": "k",
+              "expr": {
+                "type": "Literal",
+                "value": 0,
+                "literal_type": "Integer"
+              },
+              "is_const": false
+            },
+            "condition": {
+              "type": "BinaryOp",
+              "op": "<",
+              "left": {
+                "type": "Ident",
+                "name": "k"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "times"
+              }
+            },
+            "post": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "k"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "k"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            },
+            "body": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "Literal",
+                          "value": "echo ",
+                          "literal_type": "Str"
+                        },
+                        "right": {
+                          "type": "Ident",
+                          "name": "k"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "else_block": null
+    }
+  ]
+}

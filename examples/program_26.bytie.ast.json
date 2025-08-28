@@ -1,0 +1,153 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "chars",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": "H",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "i",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "!",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "c0",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "chars"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "c1",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "chars"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 1,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "c2",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "chars"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 2,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Ident",
+                "name": "c0"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "c1"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "c2"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Array",
+              "args": [
+                {
+                  "kind": "Integer",
+                  "args": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "name": "scores",
+      "expr": {
+        "type": "MapLit",
+        "entries": [
+          [
+            "alice",
+            {
+              "type": "ArrayLit",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": 10,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 11,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 9,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          ],
+          [
+            "bob",
+            {
+              "type": "ArrayLit",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": 8,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 7,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 10,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          ]
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "al",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "scores"
+        },
+        "index": {
+          "type": "Literal",
+          "value": "alice",
+          "literal_type": "Str"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "first",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "al"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "alice first score: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "first"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

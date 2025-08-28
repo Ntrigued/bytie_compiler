@@ -1,0 +1,850 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "convert_t",
+        "s_to_i",
+        "s_to_d"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "num",
+      "expr": {
+        "type": "UnaryOp",
+        "op": "-",
+        "operand": {
+          "type": "Literal",
+          "value": 10,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "db_num",
+      "expr": {
+        "type": "Literal",
+        "value": 1.3459,
+        "literal_type": "Double"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "s",
+      "expr": {
+        "type": "Literal",
+        "value": "Some ch@arcters in a str1ng! 😊",
+        "literal_type": "Str"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "pi",
+      "expr": {
+        "type": "Literal",
+        "value": 3.14159,
+        "literal_type": "Double"
+      },
+      "is_const": true
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "sum",
+      "expr": {
+        "type": "BinaryOp",
+        "op": "+",
+        "left": {
+          "type": "Ident",
+          "name": "num"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "pi"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "s2",
+      "expr": {
+        "type": "BinaryOp",
+        "op": "+",
+        "left": {
+          "type": "BinaryOp",
+          "op": "+",
+          "left": {
+            "type": "Ident",
+            "name": "num"
+          },
+          "right": {
+            "type": "Ident",
+            "name": "s"
+          }
+        },
+        "right": {
+          "type": "Ident",
+          "name": "pi"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Error",
+          "args": []
+        }
+      },
+      "name": "e",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "error"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "error_name",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "error_message",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "err_name",
+      "expr": {
+        "type": "Member",
+        "target": {
+          "type": "Ident",
+          "name": "e"
+        },
+        "name": "name"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "err_message",
+      "expr": {
+        "type": "Member",
+        "target": {
+          "type": "Ident",
+          "name": "e"
+        },
+        "name": "message"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "arr_s",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": "a",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "B",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "<",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "3.1",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "avc",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "😉",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "😉😉",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "arr_i",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": 1,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "UnaryOp",
+            "op": "-",
+            "operand": {
+              "type": "Literal",
+              "value": 123,
+              "literal_type": "Integer"
+            }
+          },
+          {
+            "type": "Literal",
+            "value": 54145,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 12349812347129,
+            "literal_type": "Integer"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Array",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "arr_a",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Ident",
+            "name": "arr_s"
+          },
+          {
+            "type": "Ident",
+            "name": "arr_i"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "another_ref_to_arr_i",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "arr_a"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 1,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "another_ref_to_arr_s",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "arr_a"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "another_ref_to_arr_i2",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "arr_a"
+        },
+        "index": {
+          "type": "UnaryOp",
+          "op": "-",
+          "operand": {
+            "type": "Literal",
+            "value": 1,
+            "literal_type": "Integer"
+          }
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "another_ref_to_arr_s2",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "arr_a"
+        },
+        "index": {
+          "type": "Literal",
+          "value": 0,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "third_ref_to_arr_s",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "arr_a"
+        },
+        "index": {
+          "type": "UnaryOp",
+          "op": "-",
+          "operand": {
+            "type": "Literal",
+            "value": 2,
+            "literal_type": "Integer"
+          }
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Array",
+              "args": [
+                {
+                  "kind": "Integer",
+                  "args": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "name": "m",
+      "expr": {
+        "type": "MapLit",
+        "entries": [
+          [
+            "key1",
+            {
+              "type": "ArrayLit",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 2,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 3,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          ],
+          [
+            "key2",
+            {
+              "type": "ArrayLit",
+              "elements": [
+                {
+                  "type": "UnaryOp",
+                  "op": "-",
+                  "operand": {
+                    "type": "Literal",
+                    "value": 123,
+                    "literal_type": "Integer"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": 34253443852345,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 234209,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          ]
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "val1",
+      "expr": {
+        "type": "Index",
+        "target": {
+          "type": "Ident",
+          "name": "m"
+        },
+        "index": {
+          "type": "Literal",
+          "value": "key1",
+          "literal_type": "Str"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "i",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_i"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "1",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "d",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "s_to_d"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "1.0",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Assign",
+        "target": {
+          "type": "Ident",
+          "name": "d"
+        },
+        "value": {
+          "type": "Call",
+          "func": {
+            "type": "Ident",
+            "name": "convert_t"
+          },
+          "args": [
+            {
+              "type": "Literal",
+              "value": {
+                "__type__": "TypeSpec",
+                "value": {
+                  "kind": "Double",
+                  "args": []
+                }
+              },
+              "literal_type": "TypeSpec"
+            },
+            {
+              "type": "Literal",
+              "value": {
+                "__type__": "TypeSpec",
+                "value": {
+                  "kind": "Str",
+                  "args": []
+                }
+              },
+              "literal_type": "TypeSpec"
+            },
+            {
+              "type": "Literal",
+              "value": "2.0",
+              "literal_type": "Str"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "arr_str",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": "a",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "b",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "c",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "str_from_arr",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "convert"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Str",
+                "args": []
+              }
+            },
+            "literal_type": "TypeSpec"
+          },
+          {
+            "type": "Literal",
+            "value": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Array",
+                "args": [
+                  {
+                    "kind": "Str",
+                    "args": []
+                  }
+                ]
+              }
+            },
+            "literal_type": "TypeSpec"
+          },
+          {
+            "type": "Ident",
+            "name": "arr_str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "arr_from_str",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "convert"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Array",
+                "args": [
+                  {
+                    "kind": "Str",
+                    "args": []
+                  }
+                ]
+              }
+            },
+            "literal_type": "TypeSpec"
+          },
+          {
+            "type": "Literal",
+            "value": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Str",
+                "args": []
+              }
+            },
+            "literal_type": "TypeSpec"
+          },
+          {
+            "type": "Literal",
+            "value": "wx.y z",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    }
+  ]
+}

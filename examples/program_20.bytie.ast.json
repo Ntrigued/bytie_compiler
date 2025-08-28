@@ -1,0 +1,136 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "deconstructed_multiply"
+      ],
+      "source": "program_5"
+    },
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "a",
+      "expr": {
+        "type": "Literal",
+        "value": 7,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "b",
+      "expr": {
+        "type": "UnaryOp",
+        "op": "-",
+        "operand": {
+          "type": "Literal",
+          "value": 4,
+          "literal_type": "Integer"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "p",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "deconstructed_multiply"
+        },
+        "args": [
+          {
+            "type": "Ident",
+            "name": "a"
+          },
+          {
+            "type": "Ident",
+            "name": "b"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Ident",
+                    "name": "a"
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " * ",
+                    "literal_type": "Str"
+                  }
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "b"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": " = ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "p"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

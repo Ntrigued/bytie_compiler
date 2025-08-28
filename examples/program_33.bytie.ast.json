@@ -1,0 +1,54 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "convert_t"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Call",
+            "func": {
+              "type": "Ident",
+              "name": "convert_t"
+            },
+            "args": [
+              {
+                "type": "Literal",
+                "value": {
+                  "__type__": "TypeSpec",
+                  "value": {
+                    "kind": "Double",
+                    "args": []
+                  }
+                },
+                "literal_type": "TypeSpec"
+              },
+              {
+                "type": "Ident",
+                "name": "String"
+              },
+              {
+                "type": "Literal",
+                "value": "2.0",
+                "literal_type": "Str"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

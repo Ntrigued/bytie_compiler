@@ -1,0 +1,190 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FuncDecl",
+      "name": "throws_error",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Double",
+              "args": []
+            }
+          },
+          "name": "d"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "None",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "i",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "s_to_i"
+              },
+              "args": [
+                {
+                  "type": "Ident",
+                  "name": "d"
+                }
+              ]
+            },
+            "is_const": false
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "i: ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "i"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "FuncDecl",
+      "name": "catch_error",
+      "params": [],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "None",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "AttemptStmt",
+            "try_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "throws_error"
+                    },
+                    "args": [
+                      {
+                        "type": "Literal",
+                        "value": 1.0,
+                        "literal_type": "Double"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "err_name": "err",
+            "catch_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "Literal",
+                          "value": "The error name:: ",
+                          "literal_type": "Str"
+                        },
+                        "right": {
+                          "type": "Member",
+                          "target": {
+                            "type": "Ident",
+                            "name": "err"
+                          },
+                          "name": "name"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "Literal",
+                          "value": "The error message: ",
+                          "literal_type": "Str"
+                        },
+                        "right": {
+                          "type": "Member",
+                          "target": {
+                            "type": "Ident",
+                            "name": "err"
+                          },
+                          "name": "message"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

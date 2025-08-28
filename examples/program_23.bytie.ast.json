@@ -1,0 +1,188 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "FuncDecl",
+      "name": "avg3",
+      "params": [
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "a"
+        },
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "b"
+        },
+        {
+          "type": "FuncParam",
+          "type_spec": {
+            "__type__": "TypeSpec",
+            "value": {
+              "kind": "Integer",
+              "args": []
+            }
+          },
+          "name": "c"
+        }
+      ],
+      "return_type": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "sum",
+            "expr": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "a"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "b"
+                }
+              },
+              "right": {
+                "type": "Ident",
+                "name": "c"
+              }
+            },
+            "is_const": false
+          },
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Double",
+                "args": []
+              }
+            },
+            "name": "div",
+            "expr": {
+              "type": "Literal",
+              "value": 3.0,
+              "literal_type": "Double"
+            },
+            "is_const": false
+          },
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "res",
+            "expr": {
+              "type": "BinaryOp",
+              "op": "/",
+              "left": {
+                "type": "Ident",
+                "name": "sum"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "div"
+              }
+            },
+            "is_const": false
+          },
+          {
+            "type": "ReturnStmt",
+            "value": {
+              "type": "Ident",
+              "name": "res"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "avg3(3,4,5) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "avg3"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 3,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 4,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 5,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
