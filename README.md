@@ -45,13 +45,28 @@ example, to run `examples/program_1.bytie` use:
 python -m bytie examples/program_1.bytie
 ```
 
-The interpreter supports an optional `-v` flag (repeatable up to
-four times) which enables debug logging.  Debug output is written
+The interpreter supports several command-line options:
+
+### Verbosity and Debug Options
+- `-v` flag (repeatable up to four times) which enables debug logging.  Debug output is written
 to `debug.txt` in the current working directory.  Higher verbosity
 levels produce more detailed traces.  For example:
 
 ```sh
 python -m bytie -vvv examples/program_7.bytie
+```
+
+### AST Generation and Execution
+- `--emit-ast <program_file>` - Parse a .bytie file and generate a file containing a JSON representation of the abstract syntax tree. The output file will have the same name as the input with `.ast.json` appended.
+
+```sh
+python -m bytie --emit-ast examples/program_1.bytie
+# Creates examples/program_1.bytie.ast.json
+```
+
+- `--ast <ast_json_file>` - Execute a previously generated AST JSON file instead of parsing source code.
+```sh
+python -m bytie --ast examples/program_1.bytie.ast.json
 ```
 
 ## Standard Library
