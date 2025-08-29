@@ -1,17 +1,30 @@
 # error handling when converting an invalid string
 retrieve print, s_to_i from Standard;
 
+print("Safe string-to-integer conversion demonstration");
+print("This function handles conversion errors gracefully");
+
 function safe_to_int(Str s) -> Integer {
   Integer val = 0;
+  print("Attempting to convert '" + s + "' to integer...");
   attempt {
     val = s_to_i(s);
+    print("Conversion successful: " + val);
   } fix (err) {
     print("convert failed: " + err.name + " -> " + err.message);
+    print("Setting default value to 0");
     val = 0;
   }
   return val;
 }
 
+print("Testing safe_to_int function...");
+print("Testing with valid string '123'...");
 Integer a = safe_to_int("123");
+
+print("Testing with invalid string '12x'...");
 Integer b = safe_to_int("12x");
+
+print("Final results:");
 print("a=" + a + ", b=" + b);
+print("Error handling demonstration completed.");

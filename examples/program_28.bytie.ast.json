@@ -9,6 +9,23 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Array search demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -68,6 +85,48 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "Searching for ",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "target"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": " in array: ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "bag"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -102,6 +161,23 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Starting search...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "WhileStmt",
       "condition": {
         "type": "BinaryOp",
@@ -119,6 +195,55 @@
       "body": {
         "type": "Block",
         "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "BinaryOp",
+                      "op": "+",
+                      "left": {
+                        "type": "Literal",
+                        "value": "Checking position ",
+                        "literal_type": "Str"
+                      },
+                      "right": {
+                        "type": "Ident",
+                        "name": "idx"
+                      }
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": ": ",
+                      "literal_type": "Str"
+                    }
+                  },
+                  "right": {
+                    "type": "Index",
+                    "target": {
+                      "type": "Ident",
+                      "name": "bag"
+                    },
+                    "index": {
+                      "type": "Ident",
+                      "name": "idx"
+                    }
+                  }
+                }
+              ]
+            }
+          },
           {
             "type": "IfStmt",
             "condition": {
@@ -157,6 +282,40 @@
                       "literal_type": "Integer"
                     }
                   }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "BinaryOp",
+                          "op": "+",
+                          "left": {
+                            "type": "Literal",
+                            "value": "Target found at position ",
+                            "literal_type": "Str"
+                          },
+                          "right": {
+                            "type": "Ident",
+                            "name": "idx"
+                          }
+                        },
+                        "right": {
+                          "type": "Literal",
+                          "value": "!",
+                          "literal_type": "Str"
+                        }
+                      }
+                    ]
+                  }
                 }
               ]
             },
@@ -184,6 +343,23 @@
                 }
               }
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Search completed.",
+            "literal_type": "Str"
           }
         ]
       }

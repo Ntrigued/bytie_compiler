@@ -1,14 +1,27 @@
 # simple contains check in array
 retrieve print from Standard;
 
+print("Array search demonstration");
 Array<Integer> bag = [3,6,9,12];
 Integer target = 9;
-Integer found = 0;
+print("Searching for " + target + " in array: " + bag);
 
+Integer found = 0;
 Integer idx = 0;
+print("Starting search...");
+
 while(idx < 4) {
-  if(bag[idx] == target) { found = 1; }
+  print("Checking position " + idx + ": " + bag[idx]);
+  if(bag[idx] == target) { 
+    found = 1; 
+    print("Target found at position " + idx + "!");
+  }
   idx = idx + 1;
 }
-if(found == 1) { print("found " + target); }
-else { print("not found"); }
+
+print("Search completed.");
+if(found == 1) { 
+  print("found " + target); 
+} else { 
+  print("not found"); 
+}

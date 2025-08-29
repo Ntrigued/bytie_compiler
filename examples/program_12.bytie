@@ -1,7 +1,23 @@
 # negative indexing
 retrieve print from Standard;
 
+print("Negative indexing demonstration");
+print("Negative indices count from the end of the array");
+
 Array<Str> letters = ["a","b","c","d","e"];
+print("Array: " + letters);
+print("Array length: 5");
+print("Positive indices: 0,1,2,3,4");
+print("Negative indices: -5,-4,-3,-2,-1");
+
+print("Accessing elements with negative indices...");
 Str last = letters[-1];
 Str second_last = letters[-2];
-print("last: " + last + ", second_last: " + second_last);
+print("letters[-1] = " + last + " (last element)");
+print("letters[-2] = " + second_last + " (second to last element)");
+
+print("Verification:");
+print("letters[4] = " + letters[4] + " (should equal letters[-1])");
+print("letters[3] = " + letters[3] + " (should equal letters[-2])");
+
+print("Negative indexing demonstration completed.");

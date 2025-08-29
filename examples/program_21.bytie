@@ -1,11 +1,23 @@
 # Map of Maps
 retrieve print from Standard;
 
+print("Nested Map demonstration");
+print("Creating a table with rows and columns...");
+
 Map<Map<Integer>> table = {
   "row1": {"c1": 1, "c2": 2},
   "row2": {"c1": 3, "c2": 4}
 };
 
+print("Table structure:");
+print("row1: " + table["row1"]);
+print("row2: " + table["row2"]);
+
+print("Accessing nested values...");
 Map<Integer> row2 = table["row2"];
+print("Extracted row2: " + row2);
+
 Integer c2 = row2["c2"];
-print("row2.c2 = " + c2);
+print("Value at row2.c2 = " + c2);
+
+print("Nested map demonstration completed.");

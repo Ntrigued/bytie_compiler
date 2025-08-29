@@ -2,7 +2,15 @@
 retrieve deconstructed_multiply from "program_5";
 retrieve print from Standard;
 
+print("Function import demonstration");
+print("Importing deconstructed_multiply function from program_5.bytie");
+
 Integer a = 7;
 Integer b = -4;
+print("Testing with a = " + a + ", b = " + b);
+
+print("Calling deconstructed_multiply(" + a + ", " + b + ")...");
 Integer p = deconstructed_multiply(a, b);
-print(a + " * " + b + " = " + p);
+print("Result: " + a + " * " + b + " = " + p);
+
+print("Function import demonstration completed.");

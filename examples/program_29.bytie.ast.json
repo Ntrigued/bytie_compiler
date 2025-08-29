@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Multiplication table demonstration (3x3)",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Generating multiplication table from 1 to 3...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -43,6 +77,40 @@
       "body": {
         "type": "Block",
         "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "Row ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "a"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": ":",
+                    "literal_type": "Str"
+                  }
+                }
+              ]
+            }
+          },
           {
             "type": "VarDecl",
             "type_spec": {
@@ -165,6 +233,23 @@
           {
             "type": "ExprStmt",
             "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "---",
+                  "literal_type": "Str"
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
               "type": "Assign",
               "target": {
                 "type": "Ident",
@@ -184,6 +269,23 @@
                 }
               }
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Multiplication table completed.",
+            "literal_type": "Str"
           }
         ]
       }

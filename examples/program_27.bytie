@@ -1,7 +1,17 @@
 # creating and inspecting an Error
 retrieve print from Standard;
 
+print("Error creation and inspection demonstration");
+print("Creating a new Error object...");
+
 Error e = error("NotFound", "item missing");
+print("Error created successfully");
+
 Str n = e.name;
 Str m = e.message;
-print("err=" + n + " :: " + m);
+print("Extracting error properties...");
+print("Error name: " + n);
+print("Error message: " + m);
+print("Combined error info: err=" + n + " :: " + m);
+
+print("Error demonstration completed.");

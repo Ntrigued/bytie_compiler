@@ -1,7 +1,17 @@
 # Integer/Double mix behavior
 retrieve print from Standard;
 
+print("Integer/Double arithmetic demonstration");
+print("This shows how Integer * Double operations work with rounding");
+
 Integer x = 2;
 Double y = 3.49;
+print("x (Integer) = " + x);
+print("y (Double) = " + y);
+print("Note: When multiplying Integer * Double, the Double is rounded first");
+
 Integer z = x * y;  # 2 * round(3.49) = 2 * 3 = 6
-print("z = " + z);
+print("z = x * y = " + x + " * " + y + " = " + z);
+print("Explanation: " + x + " * round(" + y + ") = " + x + " * 3 = 6");
+
+print("Integer/Double arithmetic demonstration completed.");

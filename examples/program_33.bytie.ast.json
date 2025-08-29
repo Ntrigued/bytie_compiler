@@ -19,33 +19,151 @@
         },
         "args": [
           {
-            "type": "Call",
-            "func": {
-              "type": "Ident",
-              "name": "convert_t"
-            },
-            "args": [
-              {
+            "type": "Literal",
+            "value": "Type conversion demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Str",
+          "args": []
+        }
+      },
+      "name": "input_str",
+      "expr": {
+        "type": "Literal",
+        "value": "2.0",
+        "literal_type": "Str"
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
                 "type": "Literal",
-                "value": {
-                  "__type__": "TypeSpec",
-                  "value": {
-                    "kind": "Double",
-                    "args": []
-                  }
-                },
-                "literal_type": "TypeSpec"
-              },
-              {
-                "type": "Ident",
-                "name": "String"
-              },
-              {
-                "type": "Literal",
-                "value": "2.0",
+                "value": "Input string: ",
                 "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "input_str"
               }
-            ]
+            },
+            "right": {
+              "type": "Literal",
+              "value": " (type: String)",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "converted_value",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "convert_t"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Double",
+                "args": []
+              }
+            },
+            "literal_type": "TypeSpec"
+          },
+          {
+            "type": "Ident",
+            "name": "String"
+          },
+          {
+            "type": "Ident",
+            "name": "input_str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Literal",
+                "value": "Converted value: ",
+                "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "converted_value"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": " (type: Double)",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Conversion successful: String -> Double",
+            "literal_type": "Str"
           }
         ]
       }

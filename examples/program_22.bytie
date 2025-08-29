@@ -1,16 +1,23 @@
 # demonstrate attempt/fix on wrong-typed conversion
 retrieve print, s_to_i from Standard;
 
+print("Error handling demonstration with attempt/fix");
+print("This function demonstrates catching errors from wrong type conversions");
+
 function must_fail() -> Integer {
   Integer out = 0;
+  print("Attempting to convert 1.5 (Double) to Integer using s_to_i...");
   attempt {
     out = s_to_i(1.5);  # invalid: s_to_i expects Str
   } fix (err) {
-    print("oops: " + err.name + " :: " + err.message);
+    print("Error caught! oops: " + err.name + " :: " + err.message);
+    print("Setting output to -1 to indicate failure");
     out = -1;
   }
   return out;
 }
 
+print("Calling must_fail() function...");
 Integer r = must_fail();
-print("result: " + r);
+print("Function result: " + r);
+print("Error handling demonstration completed.");

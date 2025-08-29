@@ -11,6 +11,23 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Enter a number to demonstrate loops:",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -46,6 +63,31 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "You entered: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "i"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "IfStmt",
       "condition": {
         "type": "BinaryOp",
@@ -63,6 +105,23 @@
       "then_block": {
         "type": "Block",
         "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Starting loop demonstration...",
+                  "literal_type": "Str"
+                }
+              ]
+            }
+          },
           {
             "type": "ForStmt",
             "init": {
@@ -134,6 +193,48 @@
                   "is_const": false
                 },
                 {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "BinaryOp",
+                          "op": "+",
+                          "left": {
+                            "type": "BinaryOp",
+                            "op": "+",
+                            "left": {
+                              "type": "Literal",
+                              "value": "j = ",
+                              "literal_type": "Str"
+                            },
+                            "right": {
+                              "type": "Ident",
+                              "name": "j"
+                            }
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": ", a = ",
+                            "literal_type": "Str"
+                          }
+                        },
+                        "right": {
+                          "type": "Ident",
+                          "name": "a"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
                   "type": "WhileStmt",
                   "condition": {
                     "type": "BinaryOp",
@@ -175,16 +276,77 @@
                             }
                           ]
                         }
+                      },
+                      {
+                        "type": "ExprStmt",
+                        "expr": {
+                          "type": "Assign",
+                          "target": {
+                            "type": "Ident",
+                            "name": "a"
+                          },
+                          "value": {
+                            "type": "BinaryOp",
+                            "op": "-",
+                            "left": {
+                              "type": "Ident",
+                              "name": "a"
+                            },
+                            "right": {
+                              "type": "Literal",
+                              "value": 1,
+                              "literal_type": "Integer"
+                            }
+                          }
+                        }
                       }
                     ]
                   }
                 }
               ]
             }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Loop demonstration completed.",
+                  "literal_type": "Str"
+                }
+              ]
+            }
           }
         ]
       },
-      "else_block": null
+      "else_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Negative number entered, no loops executed.",
+                  "literal_type": "Str"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }

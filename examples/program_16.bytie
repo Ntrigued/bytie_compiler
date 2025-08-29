@@ -1,9 +1,21 @@
 # sum 1..n via for-loop
 retrieve print, s_to_i, input from Standard;
 
+print("For-loop summation demonstration");
+print("This program calculates the sum of numbers from 1 to n");
+
 Integer n = s_to_i(input("n? "));
+print("You entered: " + n);
+
 Integer acc = 0;
+print("Starting summation with accumulator = " + acc);
+
+print("Looping from 1 to " + n + "...");
 for(Integer i = 1; i <= n; i = i + 1) {
+  print("Adding " + i + " to accumulator");
   acc = acc + i;
+  print("Running sum: " + acc);
 }
-print("sum(1.." + n + ") = " + acc);
+
+print("Final result: sum(1.." + n + ") = " + acc);
+print("Summation demonstration completed.");

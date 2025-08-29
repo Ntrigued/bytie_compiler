@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "For loop with empty initialization demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Counter variable is declared before the loop",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -24,6 +58,48 @@
         "literal_type": "Integer"
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Initial value of i: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "i"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Starting for loop with empty init section...",
+            "literal_type": "Str"
+          }
+        ]
+      }
     },
     {
       "type": "ForStmt",
@@ -88,6 +164,48 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Loop completed. Final value of i: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "i"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

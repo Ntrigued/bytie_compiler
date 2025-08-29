@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Integer max function demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This function returns the maximum of two integers",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "FuncDecl",
       "name": "imax",
       "params": [
@@ -97,11 +131,28 @@
         },
         "args": [
           {
+            "type": "Literal",
+            "value": "Testing imax function with different inputs...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
             "type": "BinaryOp",
             "op": "+",
             "left": {
               "type": "Literal",
-              "value": "imax: ",
+              "value": "imax(10, -3) = ",
               "literal_type": "Str"
             },
             "right": {
@@ -127,6 +178,151 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "imax(5, 5) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "imax"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 5,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 5,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "imax(-10, -5) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "imax"
+              },
+              "args": [
+                {
+                  "type": "UnaryOp",
+                  "op": "-",
+                  "operand": {
+                    "type": "Literal",
+                    "value": 10,
+                    "literal_type": "Integer"
+                  }
+                },
+                {
+                  "type": "UnaryOp",
+                  "op": "-",
+                  "operand": {
+                    "type": "Literal",
+                    "value": 5,
+                    "literal_type": "Integer"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "imax(0, 100) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "imax"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 0,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 100,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Max function demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

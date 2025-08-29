@@ -2,6 +2,14 @@
   "type": "Program",
   "body": [
     {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i"
+      ],
+      "source": "Standard"
+    },
+    {
       "type": "FuncDecl",
       "name": "throws_error",
       "params": [
@@ -182,6 +190,51 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing error handling...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "catch_error"
+        },
+        "args": []
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Error handling test completed.",
+            "literal_type": "Str"
           }
         ]
       }

@@ -11,6 +11,23 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Fibonacci sequence demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -46,6 +63,40 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Literal",
+                "value": "You requested ",
+                "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "k"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": " Fibonacci numbers",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -78,6 +129,31 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Initial array: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "fibs"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -93,6 +169,23 @@
         "literal_type": "Integer"
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Building sequence...",
+            "literal_type": "Str"
+          }
+        ]
+      }
     },
     {
       "type": "WhileStmt",
@@ -111,6 +204,31 @@
       "body": {
         "type": "Block",
         "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Adding element at position ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "i"
+                  }
+                }
+              ]
+            }
+          },
           {
             "type": "ExprStmt",
             "expr": {
@@ -158,6 +276,23 @@
               "type": "Ident",
               "name": "i"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Note: This is a simplified demonstration that counts positions rather than computing actual Fibonacci numbers.",
+            "literal_type": "Str"
           }
         ]
       }

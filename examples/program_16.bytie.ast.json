@@ -11,6 +11,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "For-loop summation demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This program calculates the sum of numbers from 1 to n",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -46,6 +80,31 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "You entered: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "n"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -61,6 +120,65 @@
         "literal_type": "Integer"
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Starting summation with accumulator = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "acc"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Literal",
+                "value": "Looping from 1 to ",
+                "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "n"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": "...",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
     },
     {
       "type": "ForStmt",
@@ -119,6 +237,40 @@
           {
             "type": "ExprStmt",
             "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "Adding ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "i"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " to accumulator",
+                    "literal_type": "Str"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
               "type": "Assign",
               "target": {
                 "type": "Ident",
@@ -136,6 +288,31 @@
                   "name": "i"
                 }
               }
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Running sum: ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "acc"
+                  }
+                }
+              ]
             }
           }
         ]
@@ -161,7 +338,7 @@
                 "op": "+",
                 "left": {
                   "type": "Literal",
-                  "value": "sum(1..",
+                  "value": "Final result: sum(1..",
                   "literal_type": "Str"
                 },
                 "right": {
@@ -179,6 +356,23 @@
               "type": "Ident",
               "name": "acc"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Summation demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

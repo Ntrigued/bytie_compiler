@@ -1,5 +1,16 @@
 # multiple imports
 retrieve input, print, s_to_d from Standard;
 
+print("Multiple imports demonstration");
+print("This program shows importing multiple functions from Standard library");
+print("Functions imported: input, print, s_to_d");
+
+print("Getting user input...");
 Double x = s_to_d(input("x? "));
-print("x doubled ~ " + (x + x));
+print("You entered: " + x);
+
+print("Demonstrating string to double conversion and arithmetic...");
+Double doubled = x + x;
+print("x doubled = " + x + " + " + x + " = " + doubled);
+
+print("Demonstration completed.");

@@ -148,13 +148,69 @@
             "is_const": false
           },
           {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "abs_b",
+            "expr": {
+              "type": "Ident",
+              "name": "b"
+            },
+            "is_const": false
+          },
+          {
+            "type": "IfStmt",
+            "condition": {
+              "type": "BinaryOp",
+              "op": "<",
+              "left": {
+                "type": "Ident",
+                "name": "b"
+              },
+              "right": {
+                "type": "Literal",
+                "value": 0,
+                "literal_type": "Integer"
+              }
+            },
+            "then_block": {
+              "type": "Block",
+              "statements": [
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "abs_b"
+                    },
+                    "value": {
+                      "type": "UnaryOp",
+                      "op": "-",
+                      "operand": {
+                        "type": "Ident",
+                        "name": "b"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "else_block": null
+          },
+          {
             "type": "WhileStmt",
             "condition": {
               "type": "BinaryOp",
               "op": ">",
               "left": {
                 "type": "Ident",
-                "name": "b"
+                "name": "abs_b"
               },
               "right": {
                 "type": "Literal",
@@ -183,6 +239,29 @@
                       "right": {
                         "type": "Ident",
                         "name": "a"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Assign",
+                    "target": {
+                      "type": "Ident",
+                      "name": "abs_b"
+                    },
+                    "value": {
+                      "type": "BinaryOp",
+                      "op": "-",
+                      "left": {
+                        "type": "Ident",
+                        "name": "abs_b"
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 1,
+                        "literal_type": "Integer"
                       }
                     }
                   }
@@ -348,6 +427,256 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing deconstructed_multiply function...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result1",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "deconstructed_multiply"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 3,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 4,
+            "literal_type": "Integer"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "deconstructed_multiply(3, 4) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result2",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "deconstructed_multiply"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 5,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "UnaryOp",
+            "op": "-",
+            "operand": {
+              "type": "Literal",
+              "value": 2,
+              "literal_type": "Integer"
+            }
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "deconstructed_multiply(5, -2) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result3",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "deconstructed_multiply"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 0,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 7,
+            "literal_type": "Integer"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "deconstructed_multiply(0, 7) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing print_sum function...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print_sum"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 3.5,
+            "literal_type": "Double"
+          },
+          {
+            "type": "Literal",
+            "value": 2.8,
+            "literal_type": "Double"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print_sum"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 10.2,
+            "literal_type": "Double"
+          },
+          {
+            "type": "Literal",
+            "value": 5.7,
+            "literal_type": "Double"
           }
         ]
       }

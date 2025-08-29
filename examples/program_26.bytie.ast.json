@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Character array demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Single-quote literals are treated as 1-character strings",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -44,6 +78,31 @@
         ]
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Character array created: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "chars"
+            }
+          }
+        ]
+      }
     },
     {
       "type": "VarDecl",
@@ -127,14 +186,142 @@
         },
         "args": [
           {
+            "type": "Literal",
+            "value": "Individual characters:",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
             "type": "BinaryOp",
             "op": "+",
             "left": {
               "type": "BinaryOp",
               "op": "+",
               "left": {
+                "type": "Literal",
+                "value": "c0 = '",
+                "literal_type": "Str"
+              },
+              "right": {
                 "type": "Ident",
                 "name": "c0"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": "'",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Literal",
+                "value": "c1 = '",
+                "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "c1"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": "'",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "Literal",
+                "value": "c2 = '",
+                "literal_type": "Str"
+              },
+              "right": {
+                "type": "Ident",
+                "name": "c2"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": "'",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "Concatenated result: ",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "c0"
+                }
               },
               "right": {
                 "type": "Ident",
@@ -145,6 +332,23 @@
               "type": "Ident",
               "name": "c2"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Character demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

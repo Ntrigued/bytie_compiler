@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Nested array demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Creating two arrays and combining them into a nested structure",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -83,6 +117,56 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "xs = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "xs"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "ys = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "ys"
+            }
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -113,6 +197,48 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Combined nested array: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "both"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Accessing elements from nested array...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -140,6 +266,31 @@
         }
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "both[0] = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "got_xs"
+            }
+          }
+        ]
+      }
     },
     {
       "type": "VarDecl",
@@ -210,14 +361,106 @@
             "type": "BinaryOp",
             "op": "+",
             "left": {
-              "type": "Literal",
-              "value": "sum xs: ",
-              "literal_type": "Str"
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "BinaryOp",
+                      "op": "+",
+                      "left": {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "Literal",
+                          "value": "Sum of elements in xs: ",
+                          "literal_type": "Str"
+                        },
+                        "right": {
+                          "type": "Index",
+                          "target": {
+                            "type": "Ident",
+                            "name": "got_xs"
+                          },
+                          "index": {
+                            "type": "Literal",
+                            "value": 0,
+                            "literal_type": "Integer"
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": " + ",
+                        "literal_type": "Str"
+                      }
+                    },
+                    "right": {
+                      "type": "Index",
+                      "target": {
+                        "type": "Ident",
+                        "name": "got_xs"
+                      },
+                      "index": {
+                        "type": "Literal",
+                        "value": 1,
+                        "literal_type": "Integer"
+                      }
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " + ",
+                    "literal_type": "Str"
+                  }
+                },
+                "right": {
+                  "type": "Index",
+                  "target": {
+                    "type": "Ident",
+                    "name": "got_xs"
+                  },
+                  "index": {
+                    "type": "Literal",
+                    "value": 2,
+                    "literal_type": "Integer"
+                  }
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": " = ",
+                "literal_type": "Str"
+              }
             },
             "right": {
               "type": "Ident",
               "name": "sum"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Nested array demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

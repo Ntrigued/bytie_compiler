@@ -1,11 +1,20 @@
 retrieve input, print, s_to_i from Standard;
 
+print("Enter a number to demonstrate loops:");
 Integer i = s_to_i(input("Enter a number"));
+print("You entered: " + i);
+
 if(i >= 0) {
+  print("Starting loop demonstration...");
   for(Integer j = 0; j < i; j = j + 1) {
     Integer a = j;
-     while(a > 0) {
-         print("a: " + a);
-     }
+    print("j = " + j + ", a = " + a);
+    while(a > 0) {
+        print("a: " + a);
+        a = a - 1;  # Fix infinite loop by decrementing a
+    }
   }
+  print("Loop demonstration completed.");
+} else {
+  print("Negative number entered, no loops executed.");
 }

@@ -62,6 +62,195 @@
           }
         ]
       }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing add function...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result1",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "add"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 5,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 3.7,
+            "literal_type": "Double"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "add(5, 3.7) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result2",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "add"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": 10,
+            "literal_type": "Integer"
+          },
+          {
+            "type": "Literal",
+            "value": 2.3,
+            "literal_type": "Double"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "add(10, 2.3) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "result3",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "add"
+        },
+        "args": [
+          {
+            "type": "UnaryOp",
+            "op": "-",
+            "operand": {
+              "type": "Literal",
+              "value": 3,
+              "literal_type": "Integer"
+            }
+          },
+          {
+            "type": "Literal",
+            "value": 1.8,
+            "literal_type": "Double"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "add(-3, 1.8) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "result3"
+            }
+          }
+        ]
+      }
     }
   ]
 }

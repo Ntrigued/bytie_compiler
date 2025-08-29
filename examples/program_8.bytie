@@ -1,8 +1,12 @@
 # first k Fibonacci numbers
 retrieve print, s_to_i, input from Standard;
 
+print("Fibonacci sequence demonstration");
 Integer k = s_to_i(input("How many fibs? "));
+print("You requested " + k + " Fibonacci numbers");
+
 Array<Integer> fibs = [0, 1];
+print("Initial array: " + fibs);
 
 Integer i = 2;
 # Build Fibonacci numbers iteratively by incrementing the index without
@@ -12,10 +16,13 @@ Integer i = 2;
 # errors that would occur if we tried to index beyond the length of
 # the fibs array.  The variables fibs and next are declared for
 # illustrative purposes but are not used to compute the result.
+print("Building sequence...");
 while(i < k) {
     # Normally we would compute the next Fibonacci number here and
     # append it to the sequence.  For the purposes of this example,
     # increment i to simulate adding one more element to the sequence.
+    print("Adding element at position " + i);
     i = i + 1;
 }
 print("fibs size: " + i);
+print("Note: This is a simplified demonstration that counts positions rather than computing actual Fibonacci numbers.");

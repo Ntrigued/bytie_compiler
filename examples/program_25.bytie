@@ -1,7 +1,16 @@
 # for loop with empty init (counter predeclared)
 retrieve print from Standard;
 
+print("For loop with empty initialization demonstration");
+print("Counter variable is declared before the loop");
+
 Integer i = 0;
+print("Initial value of i: " + i);
+print("Starting for loop with empty init section...");
+
 for(; i < 3; i = i + 1) {
   print("i=" + i);
 }
+
+print("Loop completed. Final value of i: " + i);
+print("Demonstration completed.");

@@ -1,11 +1,22 @@
 # summing numbers provided as strings
 retrieve print, s_to_i from Standard;
 
+print("String to integer conversion and summing demonstration");
 Array<Str> ss = ["4","-2","10"];
+print("Input array of strings: " + ss);
+
 Integer sum = 0;
 Integer i = 0;
+print("Converting strings to integers and summing...");
+
 while(i < 3) {
-  sum = sum + s_to_i(ss[i]);
+  Str current_str = ss[i];
+  Integer converted_num = s_to_i(current_str);
+  print("Converting '" + current_str + "' -> " + converted_num);
+  sum = sum + converted_num;
+  print("Running sum: " + sum);
   i = i + 1;
 }
-print("sum = " + sum);
+
+print("Final sum = " + sum);
+print("Demonstration completed.");

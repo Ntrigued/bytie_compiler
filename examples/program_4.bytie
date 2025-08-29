@@ -3,3 +3,14 @@ retrieve print from Standard;
 function add(Integer a, Double b) -> Integer {
     return a + b;
 }
+
+# Demonstrate the add function
+print("Testing add function...");
+Integer result1 = add(5, 3.7);
+print("add(5, 3.7) = " + result1);
+
+Integer result2 = add(10, 2.3);
+print("add(10, 2.3) = " + result2);
+
+Integer result3 = add(-3, 1.8);
+print("add(-3, 1.8) = " + result3);

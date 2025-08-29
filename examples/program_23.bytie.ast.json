@@ -9,6 +9,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Average function demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This function calculates the average of three integers with rounding",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "FuncDecl",
       "name": "avg3",
       "params": [
@@ -149,6 +183,23 @@
         },
         "args": [
           {
+            "type": "Literal",
+            "value": "Testing avg3 function with different inputs...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
             "type": "BinaryOp",
             "op": "+",
             "left": {
@@ -180,6 +231,175 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "avg3(1,2,3) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "avg3"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 2,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 3,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "avg3(10,20,30) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "avg3"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 10,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 20,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 30,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "avg3(7,8,9) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "avg3"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": 7,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 8,
+                  "literal_type": "Integer"
+                },
+                {
+                  "type": "Literal",
+                  "value": 9,
+                  "literal_type": "Integer"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Note: Results are rounded due to Integer / Double division rules",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

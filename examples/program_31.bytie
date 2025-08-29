@@ -1,17 +1,24 @@
 # user-driven repetition
 retrieve print, input, s_to_i from Standard;
 
+print("User-driven repetition demonstration");
+print("This program will repeat a message based on your input");
 
 Integer failed = 0;
 Integer times = -1;
 attempt {
   times = s_to_i(input("repeat how many times? "));
+  print("You entered: " + times);
 } fix(e) {
   print("Error: " + e);
   failed = 1;
 }
 if(! failed == 1) {
+  print("Starting repetition...");
   for(Integer k = 0; k < times; k = k + 1) {
     print("echo " + k);
   }
+  print("Repetition completed.");
+} else {
+  print("Program failed due to input error.");
 }

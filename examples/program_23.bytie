@@ -1,6 +1,9 @@
 # average of three integers, returned as Integer via rounding rule
 retrieve print from Standard;
 
+print("Average function demonstration");
+print("This function calculates the average of three integers with rounding");
+
 function avg3(Integer a, Integer b, Integer c) -> Integer {
   Integer sum = a + b + c;
   Double div = 3.0;
@@ -8,4 +11,11 @@ function avg3(Integer a, Integer b, Integer c) -> Integer {
   return res;
 }
 
+print("Testing avg3 function with different inputs...");
 print("avg3(3,4,5) = " + avg3(3,4,5));
+print("avg3(1,2,3) = " + avg3(1,2,3));
+print("avg3(10,20,30) = " + avg3(10,20,30));
+print("avg3(7,8,9) = " + avg3(7,8,9));
+
+print("Note: Results are rounded due to Integer / Double division rules");
+print("Demonstration completed.");

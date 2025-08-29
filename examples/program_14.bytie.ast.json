@@ -10,6 +10,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Safe string-to-integer conversion demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This function handles conversion errors gracefully",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "FuncDecl",
       "name": "safe_to_int",
       "params": [
@@ -53,6 +87,40 @@
             "is_const": false
           },
           {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "Attempting to convert '",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "s"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": "' to integer...",
+                    "literal_type": "Str"
+                  }
+                }
+              ]
+            }
+          },
+          {
             "type": "AttemptStmt",
             "try_block": {
               "type": "Block",
@@ -78,6 +146,31 @@
                         }
                       ]
                     }
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "BinaryOp",
+                        "op": "+",
+                        "left": {
+                          "type": "Literal",
+                          "value": "Conversion successful: ",
+                          "literal_type": "Str"
+                        },
+                        "right": {
+                          "type": "Ident",
+                          "name": "val"
+                        }
+                      }
+                    ]
                   }
                 }
               ]
@@ -139,6 +232,23 @@
                 {
                   "type": "ExprStmt",
                   "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "Literal",
+                        "value": "Setting default value to 0",
+                        "literal_type": "Str"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
                     "type": "Assign",
                     "target": {
                       "type": "Ident",
@@ -160,6 +270,40 @@
               "type": "Ident",
               "name": "val"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing safe_to_int function...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing with valid string '123'...",
+            "literal_type": "Str"
           }
         ]
       }
@@ -191,6 +335,23 @@
       "is_const": false
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Testing with invalid string '12x'...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -215,6 +376,23 @@
         ]
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Final results:",
+            "literal_type": "Str"
+          }
+        ]
+      }
     },
     {
       "type": "ExprStmt",
@@ -254,6 +432,23 @@
               "type": "Ident",
               "name": "b"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Error handling demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

@@ -1,3 +1,5 @@
+retrieve print, s_to_i from Standard;
+
 function throws_error(Double d) -> None {
     Integer i = s_to_i(d); # this would throw an error because s_to_i only accepts an Integer
     print("i: " + i);
@@ -11,3 +13,8 @@ function catch_error() -> None {
         print("The error message: " + err.message);
    }
 }
+
+# Add a main execution block to demonstrate the error handling
+print("Testing error handling...");
+catch_error();
+print("Error handling test completed.");

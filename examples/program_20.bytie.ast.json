@@ -16,6 +16,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Function import demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Importing deconstructed_multiply function from program_5.bytie",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -52,6 +86,99 @@
         }
       },
       "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Literal",
+                  "value": "Testing with a = ",
+                  "literal_type": "Str"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "a"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": ", b = ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Calling deconstructed_multiply(",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "a"
+                  }
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": ", ",
+                  "literal_type": "Str"
+                }
+              },
+              "right": {
+                "type": "Ident",
+                "name": "b"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": ")...",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
     },
     {
       "type": "VarDecl",
@@ -104,8 +231,17 @@
                   "type": "BinaryOp",
                   "op": "+",
                   "left": {
-                    "type": "Ident",
-                    "name": "a"
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "Result: ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "a"
+                    }
                   },
                   "right": {
                     "type": "Literal",
@@ -128,6 +264,23 @@
               "type": "Ident",
               "name": "p"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Function import demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

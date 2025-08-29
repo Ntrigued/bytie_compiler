@@ -1,9 +1,17 @@
 # procedure-style function (-> None)
 retrieve print from Standard;
 
+print("Procedure-style function demonstration");
+print("Functions that return None are called procedures");
+
 function banner(Str s) -> None {
   print("=== " + s + " ===");
 }
 
+print("Calling banner function with different strings...");
 banner("Bytie");
 banner("Rocks");
+banner("Programming");
+
+print("Procedure demonstration completed.");
+print("Note: These functions don't return values, they just perform actions");

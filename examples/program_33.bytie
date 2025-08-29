@@ -1,3 +1,10 @@
 retrieve print, convert_t from Standard;
 
-print(convert_t(Double, String, "2.0"));
+print("Type conversion demonstration");
+Str input_str = "2.0";
+print("Input string: " + input_str + " (type: String)");
+
+Double converted_value = convert_t(Double, String, input_str);
+print("Converted value: " + converted_value + " (type: Double)");
+
+print("Conversion successful: String -> Double");

@@ -1,9 +1,18 @@
 # simple max function (Integer)
 retrieve print from Standard;
 
+print("Integer max function demonstration");
+print("This function returns the maximum of two integers");
+
 function imax(Integer x, Integer y) -> Integer {
   if(x >= y) { return x; }
   else { return y; }
 }
 
-print("imax: " + imax(10, -3));
+print("Testing imax function with different inputs...");
+print("imax(10, -3) = " + imax(10, -3));
+print("imax(5, 5) = " + imax(5, 5));
+print("imax(-10, -5) = " + imax(-10, -5));
+print("imax(0, 100) = " + imax(0, 100));
+
+print("Max function demonstration completed.");

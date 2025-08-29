@@ -1,9 +1,16 @@
 # countdown with while
 retrieve print from Standard;
 
+print("Countdown demonstration with while loop");
+print("Starting countdown sequence...");
+
 Integer t = 5;
+print("Initial countdown value: " + t);
+
 while(t > 0) {
   print("t=" + t);
   t = t - 1;
 }
+
 print("liftoff!");
+print("Countdown demonstration completed.");

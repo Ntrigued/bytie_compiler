@@ -1,10 +1,22 @@
 # nested arrays
 retrieve print from Standard;
 
+print("Nested array demonstration");
+print("Creating two arrays and combining them into a nested structure");
+
 Array<Integer> xs = [1,2,3];
 Array<Integer> ys = [4,5,6];
-Array<Array> both = [xs, ys];
+print("xs = " + xs);
+print("ys = " + ys);
 
+Array<Array> both = [xs, ys];
+print("Combined nested array: " + both);
+
+print("Accessing elements from nested array...");
 Array<Integer> got_xs = both[0];
+print("both[0] = " + got_xs);
+
 Integer sum = got_xs[0] + got_xs[1] + got_xs[2];
-print("sum xs: " + sum);
+print("Sum of elements in xs: " + got_xs[0] + " + " + got_xs[1] + " + " + got_xs[2] + " = " + sum);
+
+print("Nested array demonstration completed.");

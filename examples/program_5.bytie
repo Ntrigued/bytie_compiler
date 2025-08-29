@@ -9,8 +9,12 @@ function deconstructed_multiply(Integer a, Integer b) -> Integer {
     if(b < 0) { b_is_negative = 1; }
 
     Integer sum = 0;
-    while(b > 0) {
+    Integer abs_b = b;
+    if(b < 0) { abs_b = -b; }
+    
+    while(abs_b > 0) {
         sum = sum + a;
+        abs_b = abs_b - 1;  # Fix infinite loop
     }
 
     if(b_is_negative == 1) {
@@ -24,3 +28,18 @@ function print_sum(Double a, Double b) -> None {
    Integer sum = add(a+0, b); // a + 0 needed to convert a to Integer,  a + 0.0 would keep it a Double;
    print("The sum is: " + sum);
 }
+
+# Demonstrate the functions
+print("Testing deconstructed_multiply function...");
+Integer result1 = deconstructed_multiply(3, 4);
+print("deconstructed_multiply(3, 4) = " + result1);
+
+Integer result2 = deconstructed_multiply(5, -2);
+print("deconstructed_multiply(5, -2) = " + result2);
+
+Integer result3 = deconstructed_multiply(0, 7);
+print("deconstructed_multiply(0, 7) = " + result3);
+
+print("Testing print_sum function...");
+print_sum(3.5, 2.8);
+print_sum(10.2, 5.7);

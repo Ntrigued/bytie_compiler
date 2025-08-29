@@ -11,6 +11,74 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Multiple imports demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This program shows importing multiple functions from Standard library",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Functions imported: input, print, s_to_d",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Getting user input...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -59,21 +127,130 @@
             "op": "+",
             "left": {
               "type": "Literal",
-              "value": "x doubled ~ ",
+              "value": "You entered: ",
               "literal_type": "Str"
             },
             "right": {
+              "type": "Ident",
+              "name": "x"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Demonstrating string to double conversion and arithmetic...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "doubled",
+      "expr": {
+        "type": "BinaryOp",
+        "op": "+",
+        "left": {
+          "type": "Ident",
+          "name": "x"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "x"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
               "type": "BinaryOp",
               "op": "+",
               "left": {
-                "type": "Ident",
-                "name": "x"
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "x doubled = ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "x"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " + ",
+                    "literal_type": "Str"
+                  }
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "x"
+                }
               },
               "right": {
-                "type": "Ident",
-                "name": "x"
+                "type": "Literal",
+                "value": " = ",
+                "literal_type": "Str"
               }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "doubled"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

@@ -10,6 +10,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Error handling demonstration with attempt/fix",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This function demonstrates catching errors from wrong type conversions",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "FuncDecl",
       "name": "must_fail",
       "params": [],
@@ -39,6 +73,23 @@
               "literal_type": "Integer"
             },
             "is_const": false
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Attempting to convert 1.5 (Double) to Integer using s_to_i...",
+                  "literal_type": "Str"
+                }
+              ]
+            }
           },
           {
             "type": "AttemptStmt",
@@ -95,7 +146,7 @@
                             "op": "+",
                             "left": {
                               "type": "Literal",
-                              "value": "oops: ",
+                              "value": "Error caught! oops: ",
                               "literal_type": "Str"
                             },
                             "right": {
@@ -128,6 +179,23 @@
                 {
                   "type": "ExprStmt",
                   "expr": {
+                    "type": "Call",
+                    "func": {
+                      "type": "Ident",
+                      "name": "print"
+                    },
+                    "args": [
+                      {
+                        "type": "Literal",
+                        "value": "Setting output to -1 to indicate failure",
+                        "literal_type": "Str"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExprStmt",
+                  "expr": {
                     "type": "Assign",
                     "target": {
                       "type": "Ident",
@@ -153,6 +221,23 @@
               "type": "Ident",
               "name": "out"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Calling must_fail() function...",
+            "literal_type": "Str"
           }
         ]
       }
@@ -191,13 +276,30 @@
             "op": "+",
             "left": {
               "type": "Literal",
-              "value": "result: ",
+              "value": "Function result: ",
               "literal_type": "Str"
             },
             "right": {
               "type": "Ident",
               "name": "r"
             }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Error handling demonstration completed.",
+            "literal_type": "Str"
           }
         ]
       }

@@ -11,6 +11,40 @@
       "source": "Standard"
     },
     {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "User-driven repetition demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This program will repeat a message based on your input",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
       "type": "VarDecl",
       "type_spec": {
         "__type__": "TypeSpec",
@@ -85,6 +119,31 @@
                 ]
               }
             }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "You entered: ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "times"
+                  }
+                }
+              ]
+            }
           }
         ]
       },
@@ -157,6 +216,23 @@
       "then_block": {
         "type": "Block",
         "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Starting repetition...",
+                  "literal_type": "Str"
+                }
+              ]
+            }
+          },
           {
             "type": "ForStmt",
             "init": {
@@ -238,10 +314,48 @@
                 }
               ]
             }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Repetition completed.",
+                  "literal_type": "Str"
+                }
+              ]
+            }
           }
         ]
       },
-      "else_block": null
+      "else_block": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "Literal",
+                  "value": "Program failed due to input error.",
+                  "literal_type": "Str"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }
