@@ -1,0 +1,585 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      2,
+      7
+    ],
+    "doubles": [
+      3.5,
+      2.8,
+      10.2,
+      5.7
+    ],
+    "strings": [
+      "The sum is: ",
+      "Testing deconstructed_multiply function...",
+      "deconstructed_multiply(3, 4) = ",
+      "deconstructed_multiply(5, -2) = ",
+      "deconstructed_multiply(0, 7) = ",
+      "Testing print_sum function..."
+    ]
+  },
+  "imports": [
+    {
+      "module": "program_4",
+      "names": [
+        "add"
+      ]
+    },
+    {
+      "module": "program_4",
+      "names": [
+        "print"
+      ]
+    },
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "add",
+    "print",
+    "bad_function",
+    "deconstructed_multiply",
+    "print_sum",
+    "result1",
+    "result2",
+    "result3"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "ICONST",
+          5
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          6
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          6
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          7
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          7
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "DCONST",
+          0
+        ],
+        [
+          "DCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "DCONST",
+          2
+        ],
+        [
+          "DCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "bad_function",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "deconstructed_multiply",
+      "params": 2,
+      "locals": [
+        "a",
+        "b",
+        "b_is_negative",
+        "sum",
+        "abs_b"
+      ],
+      "nlocals": 5,
+      "code": [
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          11
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          11
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_LOCAL",
+          3
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "STORE_LOCAL",
+          4
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          25
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          4
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          25
+        ],
+        [
+          "LOAD_LOCAL",
+          4
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "GT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          42
+        ],
+        [
+          "LOAD_LOCAL",
+          3
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          3
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_LOCAL",
+          4
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "SUB"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          4
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          25
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "EQ"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          54
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "LOAD_LOCAL",
+          3
+        ],
+        [
+          "MUL"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          3
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          54
+        ],
+        [
+          "LOAD_LOCAL",
+          3
+        ],
+        [
+          "RET"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "print_sum",
+      "params": 2,
+      "locals": [
+        "a",
+        "b",
+        "sum"
+      ],
+      "nlocals": 3,
+      "code": [
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "result1": false,
+    "result2": false,
+    "result3": false
+  },
+  "global_types": {
+    "result1": {
+      "kind": "Integer",
+      "args": []
+    },
+    "result2": {
+      "kind": "Integer",
+      "args": []
+    },
+    "result3": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

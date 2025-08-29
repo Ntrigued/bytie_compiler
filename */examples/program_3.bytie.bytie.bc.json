@@ -1,0 +1,346 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      0,
+      1
+    ],
+    "doubles": [],
+    "strings": [
+      "Enter a number to demonstrate loops:",
+      "Enter a number",
+      "You entered: ",
+      "Starting loop demonstration...",
+      "j = ",
+      ", a = ",
+      "a: ",
+      "Loop demonstration completed.",
+      "Negative number entered, no loops executed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "input",
+        "print",
+        "s_to_i"
+      ]
+    }
+  ],
+  "globals": [
+    "input",
+    "print",
+    "s_to_i",
+    "i",
+    "j",
+    "a"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "GE"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          69
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          64
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "GT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          59
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "SUB"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          42
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "JUMP",
+          26
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          73
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "i": false,
+    "j": false,
+    "a": false
+  },
+  "global_types": {
+    "i": {
+      "kind": "Integer",
+      "args": []
+    },
+    "j": {
+      "kind": "Integer",
+      "args": []
+    },
+    "a": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

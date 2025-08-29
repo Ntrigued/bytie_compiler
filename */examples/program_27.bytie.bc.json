@@ -1,0 +1,268 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [],
+    "doubles": [],
+    "strings": [
+      "Error creation and inspection demonstration",
+      "Creating a new Error object...",
+      "NotFound",
+      "item missing",
+      "Error created successfully",
+      "Extracting error properties...",
+      "Error name: ",
+      "Error message: ",
+      "Combined error info: err=",
+      " :: ",
+      "Error demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "error",
+    "e",
+    "n",
+    "m"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "GET_FIELD",
+          "name"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "GET_FIELD",
+          "message"
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "e": false,
+    "n": false,
+    "m": false
+  },
+  "global_types": {
+    "e": {
+      "kind": "Error",
+      "args": []
+    },
+    "n": {
+      "kind": "Str",
+      "args": []
+    },
+    "m": {
+      "kind": "Str",
+      "args": []
+    }
+  }
+}

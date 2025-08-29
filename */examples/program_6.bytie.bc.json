@@ -1,0 +1,237 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [],
+    "doubles": [
+      1.0
+    ],
+    "strings": [
+      "i: ",
+      "The error name:: ",
+      "The error message: ",
+      "Testing error handling...",
+      "Error handling test completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "s_to_i"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "s_to_i",
+    "throws_error",
+    "catch_error"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          0
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "throws_error",
+      "params": 1,
+      "locals": [
+        "d",
+        "i"
+      ],
+      "nlocals": 2,
+      "code": [
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "catch_error",
+      "params": 0,
+      "locals": [
+        "err"
+      ],
+      "nlocals": 1,
+      "code": [
+        [
+          "SETUP_TRY",
+          7
+        ],
+        [
+          "DCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "JUMP",
+          23
+        ],
+        [
+          "STORE_LOCAL",
+          0
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "GET_FIELD",
+          "name"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "GET_FIELD",
+          "message"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0
+}

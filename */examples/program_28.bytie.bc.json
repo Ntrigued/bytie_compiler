@@ -1,0 +1,424 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      3,
+      6,
+      9,
+      12,
+      0,
+      4,
+      1
+    ],
+    "doubles": [],
+    "strings": [
+      "Array search demonstration",
+      "Searching for ",
+      " in array: ",
+      "Starting search...",
+      "Checking position ",
+      ": ",
+      "Target found at position ",
+      "!",
+      "Search completed.",
+      "found ",
+      "not found"
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "bag",
+    "target",
+    "found",
+    "idx"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "BUILD_ARRAY",
+          4
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          5
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          72
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "EQ"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          65
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          65
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          30
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "EQ"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          87
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          91
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "bag": false,
+    "target": false,
+    "found": false,
+    "idx": false
+  },
+  "global_types": {
+    "bag": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "target": {
+      "kind": "Integer",
+      "args": []
+    },
+    "found": {
+      "kind": "Integer",
+      "args": []
+    },
+    "idx": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

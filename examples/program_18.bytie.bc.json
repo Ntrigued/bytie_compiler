@@ -1,0 +1,208 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [],
+    "doubles": [],
+    "strings": [
+      "Procedure-style function demonstration",
+      "Functions that return None are called procedures",
+      "=== ",
+      " ===",
+      "Calling banner function with different strings...",
+      "Bytie",
+      "Rocks",
+      "Programming",
+      "Procedure demonstration completed.",
+      "Note: These functions don't return values, they just perform actions"
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "banner"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "banner",
+      "params": 1,
+      "locals": [
+        "s"
+      ],
+      "nlocals": 1,
+      "code": [
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0
+}

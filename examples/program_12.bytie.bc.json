@@ -1,0 +1,425 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "doubles": [],
+    "strings": [
+      "Negative indexing demonstration",
+      "Negative indices count from the end of the array",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "Array: ",
+      "Array length: 5",
+      "Positive indices: 0,1,2,3,4",
+      "Negative indices: -5,-4,-3,-2,-1",
+      "Accessing elements with negative indices...",
+      "letters[-1] = ",
+      " (last element)",
+      "letters[-2] = ",
+      " (second to last element)",
+      "Verification:",
+      "letters[4] = ",
+      " (should equal letters[-1])",
+      "letters[3] = ",
+      " (should equal letters[-2])",
+      "Negative indexing demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "letters",
+    "last",
+    "second_last"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "BUILD_ARRAY",
+          5
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          11
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          12
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          13
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          14
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          15
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          16
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          17
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          18
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          19
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          20
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          21
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "letters": false,
+    "last": false,
+    "second_last": false
+  },
+  "global_types": {
+    "letters": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Str",
+          "args": []
+        }
+      ]
+    },
+    "last": {
+      "kind": "Str",
+      "args": []
+    },
+    "second_last": {
+      "kind": "Str",
+      "args": []
+    }
+  }
+}

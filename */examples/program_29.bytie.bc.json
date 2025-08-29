@@ -1,0 +1,297 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      1,
+      3
+    ],
+    "doubles": [],
+    "strings": [
+      "Multiplication table demonstration (3x3)",
+      "Generating multiplication table from 1 to 3...",
+      "Row ",
+      ":",
+      "x",
+      "=",
+      "---",
+      "Multiplication table completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "a",
+    "b"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "LE"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          60
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "LE"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          49
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "MUL"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          24
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          10
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "a": false,
+    "b": false
+  },
+  "global_types": {
+    "a": {
+      "kind": "Integer",
+      "args": []
+    },
+    "b": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

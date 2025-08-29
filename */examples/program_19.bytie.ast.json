@@ -1,0 +1,315 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Integer/Double arithmetic demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "This shows how Integer * Double operations work with rounding",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "x",
+      "expr": {
+        "type": "Literal",
+        "value": 2,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Double",
+          "args": []
+        }
+      },
+      "name": "y",
+      "expr": {
+        "type": "Literal",
+        "value": 3.49,
+        "literal_type": "Double"
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "x (Integer) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "x"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "y (Double) = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "y"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Note: When multiplying Integer * Double, the Double is rounded first",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "z",
+      "expr": {
+        "type": "BinaryOp",
+        "op": "*",
+        "left": {
+          "type": "Ident",
+          "name": "x"
+        },
+        "right": {
+          "type": "Ident",
+          "name": "y"
+        }
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "Literal",
+                      "value": "z = x * y = ",
+                      "literal_type": "Str"
+                    },
+                    "right": {
+                      "type": "Ident",
+                      "name": "x"
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": " * ",
+                    "literal_type": "Str"
+                  }
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "y"
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "value": " = ",
+                "literal_type": "Str"
+              }
+            },
+            "right": {
+              "type": "Ident",
+              "name": "z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "BinaryOp",
+                      "op": "+",
+                      "left": {
+                        "type": "Literal",
+                        "value": "Explanation: ",
+                        "literal_type": "Str"
+                      },
+                      "right": {
+                        "type": "Ident",
+                        "name": "x"
+                      }
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": " * round(",
+                      "literal_type": "Str"
+                    }
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "y"
+                  }
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": ") = ",
+                  "literal_type": "Str"
+                }
+              },
+              "right": {
+                "type": "Ident",
+                "name": "x"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": " * 3 = 6",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Integer/Double arithmetic demonstration completed.",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    }
+  ]
+}

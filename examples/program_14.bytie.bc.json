@@ -1,0 +1,440 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      0
+    ],
+    "doubles": [],
+    "strings": [
+      "Safe string-to-integer conversion demonstration",
+      "This function handles conversion errors gracefully",
+      "Attempting to convert '",
+      "' to integer...",
+      "Conversion successful: ",
+      "convert failed: ",
+      " -> ",
+      "Setting default value to 0",
+      "Testing safe_to_int function...",
+      "Testing with valid string '123'...",
+      "123",
+      "Testing with invalid string '12x'...",
+      "12x",
+      "Final results:",
+      "a=",
+      ", b=",
+      "Error handling demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "s_to_i"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "s_to_i",
+    "safe_to_int",
+    "a",
+    "b"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          11
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          12
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "SCONST",
+          13
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          14
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          15
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          16
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "safe_to_int",
+      "params": 1,
+      "locals": [
+        "s",
+        "val",
+        "err"
+      ],
+      "nlocals": 3,
+      "code": [
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SETUP_TRY",
+          25
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "JUMP",
+          47
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "GET_FIELD",
+          "name"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "GET_FIELD",
+          "message"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "RET"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "a": false,
+    "b": false
+  },
+  "global_types": {
+    "a": {
+      "kind": "Integer",
+      "args": []
+    },
+    "b": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

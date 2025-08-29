@@ -1,0 +1,307 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      0,
+      1,
+      2
+    ],
+    "doubles": [],
+    "strings": [
+      "Fibonacci sequence demonstration",
+      "How many fibs? ",
+      "You requested ",
+      " Fibonacci numbers",
+      "Initial array: ",
+      "Building sequence...",
+      "Adding element at position ",
+      "fibs size: ",
+      "Note: This is a simplified demonstration that counts positions rather than computing actual Fibonacci numbers."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "s_to_i",
+        "input"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "s_to_i",
+    "input",
+    "k",
+    "fibs",
+    "i"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "BUILD_ARRAY",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          51
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          34
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "k": false,
+    "fibs": false,
+    "i": false
+  },
+  "global_types": {
+    "k": {
+      "kind": "Integer",
+      "args": []
+    },
+    "fibs": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "i": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

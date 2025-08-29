@@ -1,0 +1,366 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print",
+        "s_to_i"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "String to integer conversion and summing demonstration",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Str",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "ss",
+      "expr": {
+        "type": "ArrayLit",
+        "elements": [
+          {
+            "type": "Literal",
+            "value": "4",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "-2",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "10",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Input array of strings: ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "ss"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "sum",
+      "expr": {
+        "type": "Literal",
+        "value": 0,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Integer",
+          "args": []
+        }
+      },
+      "name": "i",
+      "expr": {
+        "type": "Literal",
+        "value": 0,
+        "literal_type": "Integer"
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Converting strings to integers and summing...",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    },
+    {
+      "type": "WhileStmt",
+      "condition": {
+        "type": "BinaryOp",
+        "op": "<",
+        "left": {
+          "type": "Ident",
+          "name": "i"
+        },
+        "right": {
+          "type": "Literal",
+          "value": 3,
+          "literal_type": "Integer"
+        }
+      },
+      "body": {
+        "type": "Block",
+        "statements": [
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Str",
+                "args": []
+              }
+            },
+            "name": "current_str",
+            "expr": {
+              "type": "Index",
+              "target": {
+                "type": "Ident",
+                "name": "ss"
+              },
+              "index": {
+                "type": "Ident",
+                "name": "i"
+              }
+            },
+            "is_const": false
+          },
+          {
+            "type": "VarDecl",
+            "type_spec": {
+              "__type__": "TypeSpec",
+              "value": {
+                "kind": "Integer",
+                "args": []
+              }
+            },
+            "name": "converted_num",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "s_to_i"
+              },
+              "args": [
+                {
+                  "type": "Ident",
+                  "name": "current_str"
+                }
+              ]
+            },
+            "is_const": false
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "BinaryOp",
+                    "op": "+",
+                    "left": {
+                      "type": "BinaryOp",
+                      "op": "+",
+                      "left": {
+                        "type": "Literal",
+                        "value": "Converting '",
+                        "literal_type": "Str"
+                      },
+                      "right": {
+                        "type": "Ident",
+                        "name": "current_str"
+                      }
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": "' -> ",
+                      "literal_type": "Str"
+                    }
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "converted_num"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "sum"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "sum"
+                },
+                "right": {
+                  "type": "Ident",
+                  "name": "converted_num"
+                }
+              }
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Call",
+              "func": {
+                "type": "Ident",
+                "name": "print"
+              },
+              "args": [
+                {
+                  "type": "BinaryOp",
+                  "op": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Running sum: ",
+                    "literal_type": "Str"
+                  },
+                  "right": {
+                    "type": "Ident",
+                    "name": "sum"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ExprStmt",
+            "expr": {
+              "type": "Assign",
+              "target": {
+                "type": "Ident",
+                "name": "i"
+              },
+              "value": {
+                "type": "BinaryOp",
+                "op": "+",
+                "left": {
+                  "type": "Ident",
+                  "name": "i"
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "literal_type": "Integer"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "BinaryOp",
+            "op": "+",
+            "left": {
+              "type": "Literal",
+              "value": "Final sum = ",
+              "literal_type": "Str"
+            },
+            "right": {
+              "type": "Ident",
+              "name": "sum"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "Demonstration completed.",
+            "literal_type": "Str"
+          }
+        ]
+      }
+    }
+  ]
+}

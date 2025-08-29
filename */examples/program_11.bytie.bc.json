@@ -1,0 +1,242 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      3,
+      1,
+      0,
+      2,
+      5,
+      8,
+      4,
+      7
+    ],
+    "doubles": [],
+    "strings": [
+      "positives: "
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "nums",
+    "i",
+    "count"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "ICONST",
+          5
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "BUILD_ARRAY",
+          7
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          7
+        ],
+        [
+          "LT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          40
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "GT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          33
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          33
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          16
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "nums": false,
+    "i": false,
+    "count": false
+  },
+  "global_types": {
+    "nums": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "i": {
+      "kind": "Integer",
+      "args": []
+    },
+    "count": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

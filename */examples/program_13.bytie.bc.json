@@ -1,0 +1,455 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "doubles": [],
+    "strings": [
+      "Nested array demonstration",
+      "Creating two arrays and combining them into a nested structure",
+      "xs = ",
+      "ys = ",
+      "Combined nested array: ",
+      "Accessing elements from nested array...",
+      "both[0] = ",
+      "Sum of elements in xs: ",
+      " + ",
+      " = ",
+      "Nested array demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "xs",
+    "ys",
+    "both",
+    "got_xs",
+    "sum"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "BUILD_ARRAY",
+          3
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "ICONST",
+          5
+        ],
+        [
+          "BUILD_ARRAY",
+          3
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "BUILD_ARRAY",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          6
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "xs": false,
+    "ys": false,
+    "both": false,
+    "got_xs": false,
+    "sum": false
+  },
+  "global_types": {
+    "xs": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "ys": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "both": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Array",
+          "args": []
+        }
+      ]
+    },
+    "got_xs": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "sum": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      234
+    ],
+    "doubles": [],
+    "strings": [
+      "w",
+      "r",
+      "Here is some multi-line string data:\nEtc.\nEtc.\n\nABC\b\bxyz\b!😊",
+      "file_text.txt"
+    ],
+    "types": [
+      {
+        "kind": "Str",
+        "args": []
+      },
+      {
+        "kind": "Integer",
+        "args": []
+      }
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard_IO",
+      "names": [
+        "open_file",
+        "read_file",
+        "write_file",
+        "close_file",
+        "delete_file"
+      ]
+    },
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "convert_t"
+      ]
+    }
+  ],
+  "globals": [
+    "open_file",
+    "read_file",
+    "write_file",
+    "close_file",
+    "delete_file",
+    "print",
+    "convert_t",
+    "write_and_close",
+    "read_and_close",
+    "data",
+    "file_data"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          9
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          7
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          8
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "TCONST",
+          0
+        ],
+        [
+          "TCONST",
+          1
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          6
+        ],
+        [
+          "CALL",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          7
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          8
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "write_and_close",
+      "params": 2,
+      "locals": [
+        "filename",
+        "data",
+        "file_no"
+      ],
+      "nlocals": 3,
+      "code": [
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "read_and_close",
+      "params": 1,
+      "locals": [
+        "filename",
+        "file_no",
+        "data"
+      ],
+      "nlocals": 3,
+      "code": [
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_LOCAL",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_LOCAL",
+          2
+        ],
+        [
+          "RET"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "data": false,
+    "file_data": false
+  },
+  "global_types": {
+    "data": {
+      "kind": "Str",
+      "args": []
+    },
+    "file_data": {
+      "kind": "Str",
+      "args": []
+    }
+  }
+}

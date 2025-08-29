@@ -1,0 +1,190 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [],
+    "doubles": [],
+    "strings": [
+      "Type conversion demonstration",
+      "2.0",
+      "Input string: ",
+      " (type: String)",
+      "Converted value: ",
+      " (type: Double)",
+      "Conversion successful: String -> Double"
+    ],
+    "types": [
+      {
+        "kind": "Double",
+        "args": []
+      },
+      {
+        "kind": "Str",
+        "args": []
+      }
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "convert_t"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "convert_t",
+    "input_str",
+    "converted_value"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "TCONST",
+          0
+        ],
+        [
+          "TCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          3
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "input_str": false,
+    "converted_value": false
+  },
+  "global_types": {
+    "input_str": {
+      "kind": "Str",
+      "args": []
+    },
+    "converted_value": {
+      "kind": "Double",
+      "args": []
+    }
+  }
+}

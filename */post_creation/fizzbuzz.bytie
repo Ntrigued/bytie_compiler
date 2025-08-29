@@ -1,0 +1,18 @@
+retrieve print, input, s_to_i, mod from Standard;
+
+Integer input_val = s_to_i(input("What number should we start from?: "));
+for(Integer count = 0; count <= input_val; count = count + 1) {
+    if(mod(count, 15) == 0) {
+        print(count + " FizzBuzz");
+    } else {
+         if (mod(count, 3) == 0) {
+          print(count + " Fizz");
+        } else {
+           if(mod(count, 5) == 0) {
+               print(count + " Buzz"); 
+           } else {
+                print(count);
+           }
+        }
+    }
+}

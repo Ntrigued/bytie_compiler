@@ -1,0 +1,353 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "doubles": [],
+    "strings": [
+      "Nested Map demonstration",
+      "Creating a table with rows and columns...",
+      "row2",
+      "c2",
+      "c1",
+      "row1",
+      "Table structure:",
+      "row1: ",
+      "row2: ",
+      "Accessing nested values...",
+      "Extracted row2: ",
+      "Value at row2.c2 = ",
+      "Nested map demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "table",
+    "row2",
+    "c2"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "BUILD_MAP",
+          2
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "BUILD_MAP",
+          2
+        ],
+        [
+          "BUILD_MAP",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          8
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          9
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          10
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          11
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          12
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "table": false,
+    "row2": false,
+    "c2": false
+  },
+  "global_types": {
+    "table": {
+      "kind": "Map",
+      "args": [
+        {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    "row2": {
+      "kind": "Map",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "c2": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

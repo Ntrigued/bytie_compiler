@@ -1,0 +1,302 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      10,
+      3,
+      5,
+      0,
+      100
+    ],
+    "doubles": [],
+    "strings": [
+      "Integer max function demonstration",
+      "This function returns the maximum of two integers",
+      "Testing imax function with different inputs...",
+      "imax(10, -3) = ",
+      "imax(5, 5) = ",
+      "imax(-10, -5) = ",
+      "imax(0, 100) = ",
+      "Max function demonstration completed."
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "imax"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          4
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          5
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "NEG"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          6
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "SCONST",
+          7
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "imax",
+      "params": 2,
+      "locals": [
+        "x",
+        "y"
+      ],
+      "nlocals": 2,
+      "code": [
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "GE"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          7
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "RET"
+        ],
+        [
+          "JUMP",
+          9
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "RET"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0
+}

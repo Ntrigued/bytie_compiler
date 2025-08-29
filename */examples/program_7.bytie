@@ -1,0 +1,15 @@
+# factorial (iterative)
+retrieve print, s_to_i, input from Standard;
+
+function fact(Integer n) -> Integer {
+    Integer res = 1;
+    while(n > 1) {
+        res = res * n;
+        n = n - 1;
+    }
+    return res;
+}
+
+Integer n = s_to_i(input("n? "));
+Integer f = fact(n);
+print("fact(" + n + ") = " + f);

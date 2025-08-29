@@ -1,0 +1,11 @@
+# basic Map with Array values
+retrieve print from Standard;
+
+Map<Array<Integer>> scores = {
+  "alice": [10, 11, 9],
+  "bob":   [8,  7,  10]
+};
+
+Array<Integer> al = scores["alice"];
+Integer first = al[0];
+print("alice first score: " + first);

@@ -1,0 +1,227 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      1
+    ],
+    "doubles": [],
+    "strings": [
+      "n? ",
+      "fact(",
+      ") = "
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print",
+        "s_to_i",
+        "input"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "s_to_i",
+    "input",
+    "fact",
+    "n",
+    "f"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          5
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    },
+    {
+      "name": "fact",
+      "params": 1,
+      "locals": [
+        "n",
+        "res"
+      ],
+      "nlocals": 2,
+      "code": [
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "GT"
+        ],
+        [
+          "JUMP_IF_FALSE",
+          19
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "MUL"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "LOAD_LOCAL",
+          0
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "SUB"
+        ],
+        [
+          "DUP"
+        ],
+        [
+          "STORE_LOCAL",
+          0
+        ],
+        [
+          "POP"
+        ],
+        [
+          "JUMP",
+          2
+        ],
+        [
+          "LOAD_LOCAL",
+          1
+        ],
+        [
+          "RET"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "n": false,
+    "f": false
+  },
+  "global_types": {
+    "n": {
+      "kind": "Integer",
+      "args": []
+    },
+    "f": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [
+      8,
+      7,
+      10,
+      11,
+      9,
+      0
+    ],
+    "doubles": [],
+    "strings": [
+      "bob",
+      "alice",
+      "alice first score: "
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "print",
+    "scores",
+    "al",
+    "first"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "ICONST",
+          0
+        ],
+        [
+          "ICONST",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "BUILD_ARRAY",
+          3
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "ICONST",
+          2
+        ],
+        [
+          "ICONST",
+          3
+        ],
+        [
+          "ICONST",
+          4
+        ],
+        [
+          "BUILD_ARRAY",
+          3
+        ],
+        [
+          "BUILD_MAP",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "ICONST",
+          5
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "ADD"
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "scores": false,
+    "al": false,
+    "first": false
+  },
+  "global_types": {
+    "scores": {
+      "kind": "Map",
+      "args": [
+        {
+          "kind": "Array",
+          "args": [
+            {
+              "kind": "Integer",
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    "al": {
+      "kind": "Array",
+      "args": [
+        {
+          "kind": "Integer",
+          "args": []
+        }
+      ]
+    },
+    "first": {
+      "kind": "Integer",
+      "args": []
+    }
+  }
+}
