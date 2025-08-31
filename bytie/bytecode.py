@@ -440,11 +440,9 @@ class BytecodeVM:
             elif op == Opcode.LOAD_GLOBAL:
                 gidx = instr[1]
                 name = self.program.globals[gidx]
-                print(f"LOAD_GLOBAL: {name} = {self._int   .global_env.values[name]} {stack}")
                 if name not in self.global_env.values:
                     raise BytieError(ErrorVal('NameError', f'undefined variable {name}'))
                 stack.append(self.global_env.values[name])
-                print(f"After LOAD_GLOBAL: {stack=}")
             elif op == Opcode.STORE_GLOBAL:
                 gidx = instr[1]
                 name = self.program.globals[gidx]
