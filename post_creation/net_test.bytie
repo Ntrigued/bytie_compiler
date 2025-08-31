@@ -1,0 +1,19 @@
+retrieve get from Standard_Net;
+retrieve print from Standard;
+
+String s = create_session({});
+Map<Any> r = get('http://cnn.com', s);
+print(r['body']);
+
+attempt {
+    Map<Any> resp = get("http://news.ycombinator.com", "session");
+} fix(expected_error) {
+    print(expected_error.message);
+    print("A");
+    String session_id = create_session({});
+    print("B");
+    Map<Any> resp = get("http://news.ycombinator.com", "session");
+    print("C");
+    print(resp['body']);
+    print("D");
+}

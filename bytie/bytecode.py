@@ -440,15 +440,19 @@ class BytecodeVM:
             elif op == Opcode.LOAD_GLOBAL:
                 gidx = instr[1]
                 name = self.program.globals[gidx]
+                print(f"LOAD_GLOBAL: {name} = {self._int   .global_env.values[name]} {stack}")
                 if name not in self.global_env.values:
                     raise BytieError(ErrorVal('NameError', f'undefined variable {name}'))
                 stack.append(self.global_env.values[name])
+                print(f"After LOAD_GLOBAL: {stack=}")
             elif op == Opcode.STORE_GLOBAL:
                 gidx = instr[1]
                 name = self.program.globals[gidx]
+                print(f"STORE_GLOBAL: {name} {stack}")
                 if not stack:
                     raise BytieError(ErrorVal('RuntimeError', 'stack underflow on STORE_GLOBAL'))
                 value = stack.pop()
+                print(f"After STORE_GLOBAL: {value=} {stack=}")
                 # Check const flag
                 # If pending const assignment, this store acts as declaration.  Delay type check
                 if name in self._pending_const:
@@ -610,24 +614,24 @@ class BytecodeVM:
                             continue
                         raise ex
                     stack.append(result if result is not None else NoneVal())
-                else:
-                    try:
-                        result = self._interpreter.call_function(callee, args_vals)
-                    except BytieError as ex:
-                        err_val = ex.err
-                        handled = False
-                        while frame.try_stack:
-                            handler_ip, depth = frame.try_stack.pop()
-                            while len(stack) > depth:
-                                stack.pop()
-                            stack.append(err_val)
-                            frame.ip = handler_ip
-                            handled = True
-                            break
-                        if handled:
-                            continue
-                        raise ex
-                    stack.append(result if result is not None else NoneVal())
+                #else:
+                #    try:
+                #        result = self._interpreter.call_function(callee, args_vals)
+                #    except BytieError as ex:
+                #        err_val = ex.err
+                #        handled = False
+                #        while frame.try_stack:
+                #            handler_ip, depth = frame.try_stack.pop()
+                #            while len(stack) > depth:
+                #                stack.pop()
+                #            stack.append(err_val)
+                #            frame.ip = handler_ip
+                #            handled = True
+                #            break
+                #        if handled:
+                #            continue
+                #        raise ex
+                #    stack.append(result if result is not None else NoneVal())
             elif op == Opcode.BUILD_ARRAY:
                 n = instr[1]
                 items = []

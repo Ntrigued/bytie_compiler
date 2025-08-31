@@ -60,11 +60,22 @@ class TypeSpec:
     def none() -> 'TypeSpec':
         return TypeSpec('None')
 
+    @staticmethod
+    def any() -> 'TypeSpec':
+        return TypeSpec('Any')
+
 
 class NoneVal:
     """Marker object for the Bytie `None` value."""
     def __repr__(self) -> str:
         return 'None'
+
+
+@dataclass 
+class AnyVal:
+    """Marker object for the Bytie `Any` value."""
+    def __repr__(self) -> str:
+        return 'Any'
 
 
 @dataclass
@@ -176,7 +187,7 @@ def check_value(value: Any, spec: TypeSpec) -> bool:
         if not isinstance(value, MapVal):
             raise TypeError(f"expected Map, got {type(value).__name__}")
         val_type = spec.args[0]
-        if value.value_type != val_type:
+        if value.value_type != val_type or val_type.kind == 'Any':
             raise TypeError(f"map value type mismatch: expected {val_type}, got {value.value_type}")
         return True
     else:

@@ -1,0 +1,184 @@
+{
+  "magic": "BYTC",
+  "version": 1,
+  "const_pool": {
+    "ints": [],
+    "doubles": [],
+    "strings": [
+      "http://news.ycombinator.com",
+      "session",
+      "",
+      "body"
+    ]
+  },
+  "imports": [
+    {
+      "module": "Standard_Net",
+      "names": [
+        "get"
+      ]
+    },
+    {
+      "module": "Standard",
+      "names": [
+        "print"
+      ]
+    }
+  ],
+  "globals": [
+    "get",
+    "print",
+    "resp",
+    "expected_error",
+    "create_session",
+    "session_id"
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "params": 0,
+      "locals": [],
+      "nlocals": 0,
+      "code": [
+        [
+          "SETUP_TRY",
+          8
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "SCONST",
+          1
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "JUMP",
+          30
+        ],
+        [
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "LOAD_GLOBAL",
+          3
+        ],
+        [
+          "GET_FIELD",
+          "message"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "BUILD_MAP",
+          0
+        ],
+        [
+          "LOAD_GLOBAL",
+          4
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "STORE_GLOBAL",
+          5
+        ],
+        [
+          "SCONST",
+          0
+        ],
+        [
+          "SCONST",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          0
+        ],
+        [
+          "CALL",
+          2
+        ],
+        [
+          "STORE_GLOBAL",
+          2
+        ],
+        [
+          "LOAD_GLOBAL",
+          2
+        ],
+        [
+          "SCONST",
+          3
+        ],
+        [
+          "INDEX_GET"
+        ],
+        [
+          "LOAD_GLOBAL",
+          1
+        ],
+        [
+          "CALL",
+          1
+        ],
+        [
+          "POP"
+        ],
+        [
+          "POP_TRY"
+        ],
+        [
+          "RET"
+        ]
+      ]
+    }
+  ],
+  "entry": 0,
+  "global_const": {
+    "resp": false,
+    "session_id": false
+  },
+  "global_types": {
+    "resp": {
+      "kind": "Map",
+      "args": [
+        {
+          "kind": "Any",
+          "args": []
+        }
+      ]
+    },
+    "session_id": {
+      "kind": "Str",
+      "args": []
+    }
+  }
+}

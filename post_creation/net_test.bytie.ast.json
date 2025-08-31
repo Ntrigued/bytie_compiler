@@ -1,0 +1,79 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportStmt",
+      "names": [
+        "get"
+      ],
+      "source": "Standard_Net"
+    },
+    {
+      "type": "ImportStmt",
+      "names": [
+        "print"
+      ],
+      "source": "Standard"
+    },
+    {
+      "type": "VarDecl",
+      "type_spec": {
+        "__type__": "TypeSpec",
+        "value": {
+          "kind": "Map",
+          "args": [
+            {
+              "kind": "Any",
+              "args": []
+            }
+          ]
+        }
+      },
+      "name": "resp",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "get"
+        },
+        "args": [
+          {
+            "type": "Literal",
+            "value": "http://google.com",
+            "literal_type": "Str"
+          },
+          {
+            "type": "Literal",
+            "value": "",
+            "literal_type": "Str"
+          }
+        ]
+      },
+      "is_const": false
+    },
+    {
+      "type": "ExprStmt",
+      "expr": {
+        "type": "Call",
+        "func": {
+          "type": "Ident",
+          "name": "print"
+        },
+        "args": [
+          {
+            "type": "Index",
+            "target": {
+              "type": "Ident",
+              "name": "resp"
+            },
+            "index": {
+              "type": "Literal",
+              "value": "body",
+              "literal_type": "Str"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

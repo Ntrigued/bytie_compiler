@@ -16,6 +16,8 @@ import math
 import pathlib
 import builtins
 
+from bytie.std.net import populate_http_environment
+
 from .std.io import populate_io_environment
 from .types import (
     TypeSpec, NoneVal, ErrorVal, ArrayVal, MapVal,
@@ -898,6 +900,7 @@ class Interpreter:
 
         self.modules['Standard'] = std_env
         self.modules['Standard_IO'] = populate_io_environment()
+        self.modules['Standard_Net'] = populate_http_environment()
 
         # Expose selected builtins globally.  Many example programs invoke
         # error() and convert() without explicitly retrieving them from
@@ -1222,6 +1225,7 @@ class Interpreter:
         raise BytieError(ErrorVal('TypeError', 'invalid assignment target'))
 
     def call_function(self, func: Any, args: List[Any]) -> Any:
+        print(f"call_function: {func} {args}")
         if isinstance(func, BuiltinFunction):
             # Check arity; None means variadic
             if func.arity is not None and len(args) != func.arity:
@@ -1402,6 +1406,7 @@ class Interpreter:
         # Name may be without quotes; find file in current directory or relative to program
         if name in self.modules:
             return self.modules[name]
+        print(f"import_module: {name} not found in modules {self.modules.keys()}")
         # If name corresponds to Standard, loaded already
         # Try to load file name.bytie
         module_name = name
