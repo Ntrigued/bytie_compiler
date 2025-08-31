@@ -20,12 +20,15 @@ String file_data = read_and_close('file_text.txt');
 print(file_data);
 
 write_and_close('file_text.txt', convert_t(String, Integer, 234))
- file_data = read_and_close('file_text.txt');
+file_data = read_and_close('file_text.txt');
 print(file_data);
 
 delete_file("file_text.txt");
 
 
-Array<String> files = list_files("./");
-print(files);
-print(list_files("/"));
+print(list_files("./"));
+Array<Integer> files = list_files("./");
+for(Integer count = 0; count < len(files); count = count + 1) {
+  print(files[count]);
+}
+

@@ -808,6 +808,19 @@ class Interpreter:
         std_env = Environment()
         # Built-in functions: print, input, s_to_i, s_to_d, convert_t, convert, error
 
+        def std_len(args: List[Any]) -> Any:
+            if len(args) != 1:
+                raise BytieError(ErrorVal('TypeError', 'len expects 1 argument'))
+            arg = args[0]
+            if isinstance(arg, str):
+                return len(arg)
+            elif isinstance(arg, ArrayVal):
+                return len(arg.items)
+            elif isinstance(arg, MapVal):
+                return len(arg.entries)
+            else:
+                raise BytieError(ErrorVal('TypeError', 'len argument must be either Str, Array, or Map'))
+
         def std_print(args: List[Any]) -> Any:
             s = ''.join(to_string(a) for a in args)
             print(s)
@@ -889,6 +902,7 @@ class Interpreter:
             return ErrorVal(name, message)
 
         # Register builtins in std_env
+        std_env.values['len'] = BuiltinFunction('len', 1, TypeSpec.any(), std_len)
         std_env.values['print'] = BuiltinFunction('print', 1, None, std_print)
         std_env.values['mod'] = BuiltinFunction('mod', 2, TypeSpec.integer(), std_mod)
         std_env.values['input'] = BuiltinFunction('input', 1, None, std_input)
@@ -906,9 +920,9 @@ class Interpreter:
         # error() and convert() without explicitly retrieving them from
         # the Standard module.  To support this behaviour, copy these
         # functions into the global environment by default.  Other
-        # builtins (e.g., print, input, s_to_i, s_to_d, convert_t) still
+        # builtins (e.g., print, input, s_to_`i, s_to_d, convert_t) still
         # require an explicit retrieve statement.
-        for name in ('error', 'convert'):
+        for name in ('error', 'convert', 'len'):
             self.global_env.values[name] = std_env.values[name]
             # mark as const so it cannot be overwritten
             self.global_env.consts[name] = True
