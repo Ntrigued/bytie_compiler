@@ -1,4 +1,4 @@
-retrieve open_file, read_file, write_file, close_file, delete_file from Standard_IO;
+retrieve open_file, list_files, read_file, write_file, close_file,delete_file from Standard_IO;
 retrieve print, convert_t from Standard;
 
 function write_and_close(String filename, String data) -> None {
@@ -24,3 +24,8 @@ write_and_close('file_text.txt', convert_t(String, Integer, 234))
 print(file_data);
 
 delete_file("file_text.txt");
+
+
+Array<String> files = list_files("./");
+print(files);
+print(list_files("/"));

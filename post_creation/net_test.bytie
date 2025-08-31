@@ -6,6 +6,9 @@ attempt {
     Map<Any> r = get('http://news.ycombinator.com', s);
     print("body: " + r['body']);
     print('headers: ' + r["headers"]);
+    Map<Any> headers = r['headers'];
+    print("Content-Type: " + headers['Content-Type']);
+    print("Content-Type: " + r["headers"]['Content-Type']);
     print("status: " + r['status']);
     Integer destroyed = destroy_session(s);
     if(destroyed) {

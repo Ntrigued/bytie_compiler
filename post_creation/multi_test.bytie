@@ -1,0 +1,49 @@
+retrieve open_file, read_file, write_file, close_file, delete_file from Standard_IO;
+retrieve print, convert_t from Standard;
+
+function write_and_close(String filename, String data) -> None {
+  Integer file_no = open_file(filename, 'w');
+  write_file(file_no, data);
+  close_file(file_no);
+}
+
+function read_and_close(String filename) -> String {
+  Integer file_no = open_file(filename, 'r');
+  String data = read_file(file_no);
+  close_file(file_no);
+  return data;
+}
+
+String data = "Here is some multi-line string data:\nEtc.\nEtc.\n\nABC\b\bxyz\b!😊";
+write_and_close('file_text.txt', data);
+String file_data = read_and_close('file_text.txt');
+print(file_data);
+
+write_and_close('file_text.txt', convert_t(String, Integer, 234))
+ file_data = read_and_close('file_text.txt');
+print(file_data);
+
+delete_file("file_text.txt");
+
+
+retrieve get, create_session, destroy_session from Standard_Net;
+retrieve print from Standard;
+
+attempt {
+    String s = create_session({});
+    Map<Any> r = get('http://news.ycombinator.com', s);
+    print("body: " + r['body']);
+    print('headers: ' + r["headers"]);
+    Map<Any> headers = r['headers'];
+    print("Content-Type: " + headers['Content-Type']);
+    print("Content-Type: " + r["headers"]['Content-Type']);
+    print("status: " + r['status']);
+    Integer destroyed = destroy_session(s);
+    if(destroyed) {
+        print("Session " + s + " destroyed");
+    } else {
+        print("Session " + s + " not destroyed");
+    }
+} fix(e) {
+    print("Oops: " + e);
+}

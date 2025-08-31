@@ -185,7 +185,12 @@ def check_value(value: Any, spec: TypeSpec) -> bool:
         return True
     elif kind == 'Map':
         if not isinstance(value, MapVal):
-            raise TypeError(f"expected Map, got {type(value).__name__}")
+            if isinstance(value, dict):
+                value = MapVal(value_type=TypeSpec.any(), entries=value)
+            elif isinstance(value, list):
+                value = ArrayVal(elem_type=TypeSpec.any(), items=value)
+            else:
+                raise TypeError(f"expected Map, got {type(value).__name__}")
         val_type = spec.args[0]
         if value.value_type != val_type and val_type.kind != 'Any':
             raise TypeError(f"map value type mismatch: expected {val_type}, got {value.value_type}")

@@ -1,12 +1,12 @@
-from .basic_io import BasicIO
+from .basic_file import BasicFile
 from bytie.builtin_function import BuiltinFunction
 from bytie.errors import BytieError
 from bytie.enviironment import Environment
-from bytie.types import ErrorVal, TypeSpec
+from bytie.types import ArrayVal, ErrorVal, TypeSpec
 from typing import List, Any
 
 def populate_io_environment() -> Environment:
-        basic_io = BasicIO()
+        basic_file = BasicFile()
         io_env = Environment()
 
         def std_open_file(args: List[Any]) -> Any:
@@ -18,7 +18,7 @@ def populate_io_environment() -> Environment:
             mode = args[1]
             if not isinstance(mode, str):
                 raise BytieError(ErrorVal('TypeError', 'open_file mode argument must be Str'))
-            return basic_io.open_file(filename, mode)
+            return basic_file.open_file(filename, mode)
 
         def std_delete_file(args: List[Any]) -> Any:
             if len(args) != 1:
@@ -26,7 +26,7 @@ def populate_io_environment() -> Environment:
             filename = args[0]
             if not isinstance(filename, str):
                 raise BytieError(ErrorVal('TypeError', 'delete_file filename argument must be Str'))
-            return basic_io.delete_file(filename)
+            return basic_file.delete_file(filename)
         
         def std_rename_file(args: List[Any]) -> Any:
             if len(args) != 2:
@@ -37,7 +37,7 @@ def populate_io_environment() -> Environment:
             new_filename = args[1]
             if not isinstance(new_filename, str):
                 raise BytieError(ErrorVal('TypeError', 'rename_file new_filename argument must be Str'))
-            return basic_io.rename_file(old_filename, new_filename)
+            return basic_file.rename_file(old_filename, new_filename)
         
         def std_copy_file(args: List[Any]) -> Any:
             if len(args) != 2:
@@ -48,7 +48,7 @@ def populate_io_environment() -> Environment:
             dest_filename = args[1]
             if not isinstance(dest_filename, str):
                 raise BytieError(ErrorVal('TypeError', 'copy_file dest_filename argument must be Str'))
-            return basic_io.copy_file(source_filename, dest_filename)
+            return basic_file.copy_file(source_filename, dest_filename)
         
         def std_move_file(args: List[Any]) -> Any:
             if len(args) != 2:
@@ -59,7 +59,7 @@ def populate_io_environment() -> Environment:
             dest_filename = args[1]
             if not isinstance(dest_filename, str):
                 raise BytieError(ErrorVal('TypeError', 'move_file dest_filename argument must be Str'))
-            return basic_io.move_file(source_filename, dest_filename)
+            return basic_file.move_file(source_filename, dest_filename)
 
         def std_file_exists(args: List[Any]) -> Any:
             if len(args) != 1:
@@ -67,7 +67,7 @@ def populate_io_environment() -> Environment:
             filename = args[0]
             if not isinstance(filename, str):
                 raise BytieError(ErrorVal('TypeError', 'file_exists filename argument must be Str'))
-            return basic_io.file_exists(filename)
+            return basic_file.file_exists(filename)
 
         def std_close_file(args: List[Any]) -> Any:
             if len(args) != 1:
@@ -75,7 +75,7 @@ def populate_io_environment() -> Environment:
             fileno = args[0]
             if not isinstance(fileno, int):
                 raise BytieError(ErrorVal('TypeError', 'close_file fileno argument must be Integer'))
-            return basic_io.close_file(fileno)
+            return basic_file.close_file(fileno)
 
         def std_read_file(args: List[Any]) -> Any:
             if len(args) != 1:
@@ -83,7 +83,7 @@ def populate_io_environment() -> Environment:
             fileno = args[0]
             if not isinstance(fileno, int):
                 raise BytieError(ErrorVal('TypeError', 'read_file fileno argument must be Integer'))
-            return basic_io.read_file(fileno)
+            return basic_file.read_file(fileno)
         
         def std_write_file(args: List[Any]) -> Any:
             if len(args) != 2:
@@ -94,7 +94,15 @@ def populate_io_environment() -> Environment:
             data = args[1]
             if not isinstance(data, str):
                 raise BytieError(ErrorVal('TypeError', 'write_file data argument must be Str'))
-            basic_io.write_file(fileno, data)
+            basic_file.write_file(fileno, data)
+
+        def std_list_files(args: List[Any]) -> ArrayVal:
+            if len(args) != 1:
+                raise BytieError(ErrorVal('TypeError', 'list_files(directory) expects 1 argument'))
+            directory = args[0]
+            if not isinstance(directory, str):
+                raise BytieError(ErrorVal('TypeError', 'list_files directory argument must be Str'))
+            return basic_file.list_files(directory)
 
         io_env.values['open_file'] = BuiltinFunction('open_file', 2, TypeSpec.integer(), std_open_file)
         io_env.values['close_file'] = BuiltinFunction('close_file', 1, None, std_close_file)
@@ -105,5 +113,6 @@ def populate_io_environment() -> Environment:
         io_env.values['copy_file'] = BuiltinFunction('copy_file', 2, None, std_copy_file)
         io_env.values['move_file'] = BuiltinFunction('move_file', 2, None, std_move_file)
         io_env.values['file_exists'] = BuiltinFunction('file_exists', 1, TypeSpec.integer(), std_file_exists)
+        io_env.values['list_files'] = BuiltinFunction('list_files', 1, TypeSpec.array(TypeSpec.string()), std_list_files)
 
         return io_env

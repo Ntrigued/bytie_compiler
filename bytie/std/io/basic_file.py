@@ -1,10 +1,10 @@
 import os
 import shutil
 from bytie.errors import BytieError
-from bytie.types import ErrorVal, NoneVal
+from bytie.types import ArrayVal, ErrorVal, NoneVal, TypeSpec
 
 
-class BasicIO:
+class BasicFile:
     def __init__(self):
         self.open_files = {}
     
@@ -76,3 +76,7 @@ class BasicIO:
                 raise BytieError(ErrorVal('IOError', 'Error writing file'))
         else:
             raise BytieError(ErrorVal('FileNotFoundError', 'File not found'))
+        
+    def list_files(self, directory: str) -> ArrayVal:
+        dir_list = os.listdir(directory)
+        return ArrayVal(elem_type=TypeSpec.string(), items=dir_list)

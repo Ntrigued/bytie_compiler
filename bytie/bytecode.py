@@ -691,6 +691,11 @@ class BytecodeVM:
             elif op == Opcode.INDEX_GET:
                 idx = stack.pop()
                 target = stack.pop()
+                
+                if isinstance(target, dict):
+                    target = MapVal(TypeSpec.any(), target)
+                if isinstance(target, list):
+                    target = ArrayVal(TypeSpec.any(), target)
                 # Array indexing
                 if isinstance(target, ArrayVal):
                     if not isinstance(idx, int):
