@@ -446,11 +446,9 @@ class BytecodeVM:
             elif op == Opcode.STORE_GLOBAL:
                 gidx = instr[1]
                 name = self.program.globals[gidx]
-                print(f"STORE_GLOBAL: {name} {stack}")
                 if not stack:
                     raise BytieError(ErrorVal('RuntimeError', 'stack underflow on STORE_GLOBAL'))
                 value = stack.pop()
-                print(f"After STORE_GLOBAL: {value=} {stack=}")
                 # Check const flag
                 # If pending const assignment, this store acts as declaration.  Delay type check
                 if name in self._pending_const:

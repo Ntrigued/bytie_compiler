@@ -5,9 +5,7 @@
     "ints": [],
     "doubles": [],
     "strings": [
-      "http://news.ycombinator.com",
-      "session",
-      "",
+      "http://cnn.com",
       "body"
     ]
   },
@@ -28,10 +26,9 @@
   "globals": [
     "get",
     "print",
-    "resp",
-    "expected_error",
     "create_session",
-    "session_id"
+    "s",
+    "r"
   ],
   "functions": [
     {
@@ -41,58 +38,24 @@
       "nlocals": 0,
       "code": [
         [
-          "SETUP_TRY",
-          8
-        ],
-        [
-          "SCONST",
+          "BUILD_MAP",
           0
         ],
         [
-          "SCONST",
-          1
-        ],
-        [
           "LOAD_GLOBAL",
-          0
-        ],
-        [
-          "CALL",
           2
-        ],
-        [
-          "STORE_GLOBAL",
-          2
-        ],
-        [
-          "POP_TRY"
-        ],
-        [
-          "JUMP",
-          30
-        ],
-        [
-          "STORE_GLOBAL",
-          3
-        ],
-        [
-          "LOAD_GLOBAL",
-          3
-        ],
-        [
-          "GET_FIELD",
-          "message"
-        ],
-        [
-          "LOAD_GLOBAL",
-          1
         ],
         [
           "CALL",
           1
         ],
         [
-          "POP"
+          "STORE_GLOBAL",
+          3
+        ],
+        [
+          "SCONST",
+          0
         ],
         [
           "BUILD_MAP",
@@ -100,25 +63,13 @@
         ],
         [
           "LOAD_GLOBAL",
-          4
+          2
         ],
         [
           "CALL",
           1
         ],
         [
-          "STORE_GLOBAL",
-          5
-        ],
-        [
-          "SCONST",
-          0
-        ],
-        [
-          "SCONST",
-          2
-        ],
-        [
           "LOAD_GLOBAL",
           0
         ],
@@ -128,15 +79,15 @@
         ],
         [
           "STORE_GLOBAL",
-          2
+          4
         ],
         [
           "LOAD_GLOBAL",
-          2
+          4
         ],
         [
           "SCONST",
-          3
+          1
         ],
         [
           "INDEX_GET"
@@ -153,9 +104,6 @@
           "POP"
         ],
         [
-          "POP_TRY"
-        ],
-        [
           "RET"
         ]
       ]
@@ -163,11 +111,15 @@
   ],
   "entry": 0,
   "global_const": {
-    "resp": false,
-    "session_id": false
+    "s": false,
+    "r": false
   },
   "global_types": {
-    "resp": {
+    "s": {
+      "kind": "Str",
+      "args": []
+    },
+    "r": {
       "kind": "Map",
       "args": [
         {
@@ -175,10 +127,6 @@
           "args": []
         }
       ]
-    },
-    "session_id": {
-      "kind": "Str",
-      "args": []
     }
   }
 }

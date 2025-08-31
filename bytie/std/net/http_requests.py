@@ -20,11 +20,16 @@ class HttpRequests:
                      })
 
     def create_session(self, session_kwargs: Dict[str, Any]) -> str:    
-        print(f"Creating session with kwargs: {session_kwargs}")
         session = requests.Session(**session_kwargs)
         session_uuid = str(uuid.uuid4())
         self.sessions[session_uuid] = session
         return session_uuid
+
+    def destroy_session(self, session_id: str) -> int:
+        if session_id not in self.sessions:
+           return 0
+        self.sessions.pop(session_id)
+        return 1
 
     def get_session(self, session_id: str) -> str:
         if session_id not in self.sessions:

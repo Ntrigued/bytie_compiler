@@ -1225,7 +1225,6 @@ class Interpreter:
         raise BytieError(ErrorVal('TypeError', 'invalid assignment target'))
 
     def call_function(self, func: Any, args: List[Any]) -> Any:
-        print(f"call_function: {func} {args}")
         if isinstance(func, BuiltinFunction):
             # Check arity; None means variadic
             if func.arity is not None and len(args) != func.arity:
@@ -1406,7 +1405,6 @@ class Interpreter:
         # Name may be without quotes; find file in current directory or relative to program
         if name in self.modules:
             return self.modules[name]
-        print(f"import_module: {name} not found in modules {self.modules.keys()}")
         # If name corresponds to Standard, loaded already
         # Try to load file name.bytie
         module_name = name
