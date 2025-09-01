@@ -1,0 +1,836 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "ast_type": "Program"
+    },
+    {
+      "id": 1,
+      "ast_type": "ImportStmt"
+    },
+    {
+      "id": 2,
+      "ast_type": "ImportStmt"
+    },
+    {
+      "id": 3,
+      "ast_type": "FuncDecl"
+    },
+    {
+      "id": 4,
+      "ast_type": "Block"
+    },
+    {
+      "id": 5,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 6,
+      "ast_type": "Call"
+    },
+    {
+      "id": 7,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 8,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 9,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 10,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 11,
+      "ast_type": "Call"
+    },
+    {
+      "id": 12,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 13,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 14,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 15,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 16,
+      "ast_type": "Call"
+    },
+    {
+      "id": 17,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 18,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 19,
+      "ast_type": "FuncDecl"
+    },
+    {
+      "id": 20,
+      "ast_type": "Block"
+    },
+    {
+      "id": 21,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 22,
+      "ast_type": "Call"
+    },
+    {
+      "id": 23,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 24,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 25,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 26,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 27,
+      "ast_type": "Call"
+    },
+    {
+      "id": 28,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 29,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 30,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 31,
+      "ast_type": "Call"
+    },
+    {
+      "id": 32,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 33,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 34,
+      "ast_type": "ReturnStmt"
+    },
+    {
+      "id": 35,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 36,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 37,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 38,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 39,
+      "ast_type": "Call"
+    },
+    {
+      "id": 40,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 41,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 42,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 43,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 44,
+      "ast_type": "Call"
+    },
+    {
+      "id": 45,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 46,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 47,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 48,
+      "ast_type": "Call"
+    },
+    {
+      "id": 49,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 50,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 51,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 52,
+      "ast_type": "Call"
+    },
+    {
+      "id": 53,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 54,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 55,
+      "ast_type": "Call"
+    },
+    {
+      "id": 56,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 57,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 58,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 59,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 60,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 61,
+      "ast_type": "Assign"
+    },
+    {
+      "id": 62,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 63,
+      "ast_type": "Call"
+    },
+    {
+      "id": 64,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 65,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 66,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 67,
+      "ast_type": "Call"
+    },
+    {
+      "id": 68,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 69,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 70,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 71,
+      "ast_type": "Call"
+    },
+    {
+      "id": 72,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 73,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 74,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 75,
+      "ast_type": "Call"
+    },
+    {
+      "id": 76,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 77,
+      "ast_type": "Call"
+    },
+    {
+      "id": 78,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 79,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 80,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 81,
+      "ast_type": "Call"
+    },
+    {
+      "id": 82,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 83,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 84,
+      "ast_type": "ForStmt"
+    },
+    {
+      "id": 85,
+      "ast_type": "VarDecl"
+    },
+    {
+      "id": 86,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 87,
+      "ast_type": "BinaryOp"
+    },
+    {
+      "id": 88,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 89,
+      "ast_type": "Call"
+    },
+    {
+      "id": 90,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 91,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 92,
+      "ast_type": "Assign"
+    },
+    {
+      "id": 93,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 94,
+      "ast_type": "BinaryOp"
+    },
+    {
+      "id": 95,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 96,
+      "ast_type": "Literal"
+    },
+    {
+      "id": 97,
+      "ast_type": "Block"
+    },
+    {
+      "id": 98,
+      "ast_type": "ExprStmt"
+    },
+    {
+      "id": 99,
+      "ast_type": "Call"
+    },
+    {
+      "id": 100,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 101,
+      "ast_type": "Index"
+    },
+    {
+      "id": 102,
+      "ast_type": "Ident"
+    },
+    {
+      "id": 103,
+      "ast_type": "Ident"
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      19
+    ],
+    [
+      0,
+      36
+    ],
+    [
+      0,
+      38
+    ],
+    [
+      0,
+      43
+    ],
+    [
+      0,
+      47
+    ],
+    [
+      0,
+      51
+    ],
+    [
+      0,
+      60
+    ],
+    [
+      0,
+      66
+    ],
+    [
+      0,
+      70
+    ],
+    [
+      0,
+      74
+    ],
+    [
+      0,
+      80
+    ],
+    [
+      0,
+      84
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      4,
+      15
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      16,
+      18
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      20,
+      26
+    ],
+    [
+      20,
+      30
+    ],
+    [
+      20,
+      34
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      22,
+      24
+    ],
+    [
+      22,
+      25
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      27,
+      29
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      31,
+      33
+    ],
+    [
+      34,
+      35
+    ],
+    [
+      36,
+      37
+    ],
+    [
+      38,
+      39
+    ],
+    [
+      39,
+      40
+    ],
+    [
+      39,
+      41
+    ],
+    [
+      39,
+      42
+    ],
+    [
+      43,
+      44
+    ],
+    [
+      44,
+      45
+    ],
+    [
+      44,
+      46
+    ],
+    [
+      47,
+      48
+    ],
+    [
+      48,
+      49
+    ],
+    [
+      48,
+      50
+    ],
+    [
+      51,
+      52
+    ],
+    [
+      52,
+      53
+    ],
+    [
+      52,
+      54
+    ],
+    [
+      52,
+      55
+    ],
+    [
+      55,
+      56
+    ],
+    [
+      55,
+      57
+    ],
+    [
+      55,
+      58
+    ],
+    [
+      55,
+      59
+    ],
+    [
+      60,
+      61
+    ],
+    [
+      61,
+      62
+    ],
+    [
+      61,
+      63
+    ],
+    [
+      63,
+      64
+    ],
+    [
+      63,
+      65
+    ],
+    [
+      66,
+      67
+    ],
+    [
+      67,
+      68
+    ],
+    [
+      67,
+      69
+    ],
+    [
+      70,
+      71
+    ],
+    [
+      71,
+      72
+    ],
+    [
+      71,
+      73
+    ],
+    [
+      74,
+      75
+    ],
+    [
+      75,
+      76
+    ],
+    [
+      75,
+      77
+    ],
+    [
+      77,
+      78
+    ],
+    [
+      77,
+      79
+    ],
+    [
+      80,
+      81
+    ],
+    [
+      81,
+      82
+    ],
+    [
+      81,
+      83
+    ],
+    [
+      84,
+      85
+    ],
+    [
+      84,
+      87
+    ],
+    [
+      84,
+      92
+    ],
+    [
+      84,
+      97
+    ],
+    [
+      85,
+      86
+    ],
+    [
+      87,
+      88
+    ],
+    [
+      87,
+      89
+    ],
+    [
+      89,
+      90
+    ],
+    [
+      89,
+      91
+    ],
+    [
+      92,
+      93
+    ],
+    [
+      92,
+      94
+    ],
+    [
+      94,
+      95
+    ],
+    [
+      94,
+      96
+    ],
+    [
+      97,
+      98
+    ],
+    [
+      98,
+      99
+    ],
+    [
+      99,
+      100
+    ],
+    [
+      99,
+      101
+    ],
+    [
+      101,
+      102
+    ],
+    [
+      101,
+      103
+    ]
+  ],
+  "start": 0,
+  "end": 103
+}

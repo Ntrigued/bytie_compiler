@@ -1,0 +1,1564 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "ast_type": "Program",
+      "node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)"
+    },
+    {
+      "id": 1,
+      "ast_type": "ImportStmt",
+      "node": "ImportStmt(names=['open_file', 'read_file', 'write_file', 'close_file', 'delete_file'], source='Standard_IO')"
+    },
+    {
+      "id": 2,
+      "ast_type": "ImportStmt",
+      "node": "ImportStmt(names=['print', 'convert_t'], source='Standard')"
+    },
+    {
+      "id": 3,
+      "ast_type": "ImportStmt",
+      "node": "ImportStmt(names=['write_and_close', 'read_and_close'], source='./file_test.bytie')"
+    },
+    {
+      "id": 4,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Str, name='data', expr=Literal(value='Here is some multi-line string data:\\nEtc.\\nEtc.\\n\\nABC\\x08\\x08xyz\\x08!😊', literal_type='Str'), is_const=False)"
+    },
+    {
+      "id": 5,
+      "ast_type": "Literal",
+      "node": "Literal(value='Here is some multi-line string data:\\nEtc.\\nEtc.\\n\\nABC\\x08\\x08xyz\\x08!😊', literal_type='Str')"
+    },
+    {
+      "id": 6,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')]))"
+    },
+    {
+      "id": 7,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')])"
+    },
+    {
+      "id": 8,
+      "ast_type": "Ident",
+      "node": "Ident(name='write_and_close')"
+    },
+    {
+      "id": 9,
+      "ast_type": "Literal",
+      "node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "id": 10,
+      "ast_type": "Ident",
+      "node": "Ident(name='data')"
+    },
+    {
+      "id": 11,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Str, name='file_data', expr=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]), is_const=False)"
+    },
+    {
+      "id": 12,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "id": 13,
+      "ast_type": "Ident",
+      "node": "Ident(name='read_and_close')"
+    },
+    {
+      "id": 14,
+      "ast_type": "Literal",
+      "node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "id": 15,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))"
+    },
+    {
+      "id": 16,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])"
+    },
+    {
+      "id": 17,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 18,
+      "ast_type": "Ident",
+      "node": "Ident(name='file_data')"
+    },
+    {
+      "id": 19,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])]))"
+    },
+    {
+      "id": 20,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])])"
+    },
+    {
+      "id": 21,
+      "ast_type": "Ident",
+      "node": "Ident(name='write_and_close')"
+    },
+    {
+      "id": 22,
+      "ast_type": "Literal",
+      "node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "id": 23,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])"
+    },
+    {
+      "id": 24,
+      "ast_type": "Ident",
+      "node": "Ident(name='convert_t')"
+    },
+    {
+      "id": 25,
+      "ast_type": "Ident",
+      "node": "Ident(name='String')"
+    },
+    {
+      "id": 26,
+      "ast_type": "Literal",
+      "node": "Literal(value=Integer, literal_type='TypeSpec')"
+    },
+    {
+      "id": 27,
+      "ast_type": "Literal",
+      "node": "Literal(value=234, literal_type='Integer')"
+    },
+    {
+      "id": 28,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])))"
+    },
+    {
+      "id": 29,
+      "ast_type": "Assign",
+      "node": "Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]))"
+    },
+    {
+      "id": 30,
+      "ast_type": "Ident",
+      "node": "Ident(name='file_data')"
+    },
+    {
+      "id": 31,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "id": 32,
+      "ast_type": "Ident",
+      "node": "Ident(name='read_and_close')"
+    },
+    {
+      "id": 33,
+      "ast_type": "Literal",
+      "node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "id": 34,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))"
+    },
+    {
+      "id": 35,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])"
+    },
+    {
+      "id": 36,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 37,
+      "ast_type": "Ident",
+      "node": "Ident(name='file_data')"
+    },
+    {
+      "id": 38,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')]))"
+    },
+    {
+      "id": 39,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "id": 40,
+      "ast_type": "Ident",
+      "node": "Ident(name='delete_file')"
+    },
+    {
+      "id": 41,
+      "ast_type": "Literal",
+      "node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "id": 42,
+      "ast_type": "ImportStmt",
+      "node": "ImportStmt(names=['get', 'create_session', 'destroy_session'], source='Standard_Net')"
+    },
+    {
+      "id": 43,
+      "ast_type": "ImportStmt",
+      "node": "ImportStmt(names=['print'], source='Standard')"
+    },
+    {
+      "id": 44,
+      "ast_type": "AttemptStmt",
+      "node": "AttemptStmt(try_block=Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt), err_name=e, catch_block=Block(statements=ExprStmt))"
+    },
+    {
+      "id": 45,
+      "ast_type": "Block",
+      "node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)"
+    },
+    {
+      "id": 46,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Str, name='s', expr=Call(func=Ident(name='create_session'), args=[MapLit(entries=[])]), is_const=False)"
+    },
+    {
+      "id": 47,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='create_session'), args=[MapLit(entries=[])])"
+    },
+    {
+      "id": 48,
+      "ast_type": "Ident",
+      "node": "Ident(name='create_session')"
+    },
+    {
+      "id": 49,
+      "ast_type": "MapLit",
+      "node": "MapLit(entries=[])"
+    },
+    {
+      "id": 50,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Integer, name='a', expr=Literal(value=123, literal_type='Integer'), is_const=False)"
+    },
+    {
+      "id": 51,
+      "ast_type": "Literal",
+      "node": "Literal(value=123, literal_type='Integer')"
+    },
+    {
+      "id": 52,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Integer, name='b', expr=Ident(name='a'), is_const=False)"
+    },
+    {
+      "id": 53,
+      "ast_type": "Ident",
+      "node": "Ident(name='a')"
+    },
+    {
+      "id": 54,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))))"
+    },
+    {
+      "id": 55,
+      "ast_type": "Assign",
+      "node": "Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer')))"
+    },
+    {
+      "id": 56,
+      "ast_type": "Ident",
+      "node": "Ident(name='b')"
+    },
+    {
+      "id": 57,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))"
+    },
+    {
+      "id": 58,
+      "ast_type": "Ident",
+      "node": "Ident(name='a')"
+    },
+    {
+      "id": 59,
+      "ast_type": "Literal",
+      "node": "Literal(value=1, literal_type='Integer')"
+    },
+    {
+      "id": 60,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Map<Any>, name='r', expr=Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')]), is_const=False)"
+    },
+    {
+      "id": 61,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')])"
+    },
+    {
+      "id": 62,
+      "ast_type": "Ident",
+      "node": "Ident(name='get')"
+    },
+    {
+      "id": 63,
+      "ast_type": "Literal",
+      "node": "Literal(value='http://news.ycombinator.com', literal_type='Str')"
+    },
+    {
+      "id": 64,
+      "ast_type": "Ident",
+      "node": "Ident(name='s')"
+    },
+    {
+      "id": 65,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))]))"
+    },
+    {
+      "id": 66,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))])"
+    },
+    {
+      "id": 67,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 68,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))"
+    },
+    {
+      "id": 69,
+      "ast_type": "Literal",
+      "node": "Literal(value='body: ', literal_type='Str')"
+    },
+    {
+      "id": 70,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str'))"
+    },
+    {
+      "id": 71,
+      "ast_type": "Ident",
+      "node": "Ident(name='r')"
+    },
+    {
+      "id": 72,
+      "ast_type": "Literal",
+      "node": "Literal(value='body', literal_type='Str')"
+    },
+    {
+      "id": 73,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))]))"
+    },
+    {
+      "id": 74,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))])"
+    },
+    {
+      "id": 75,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 76,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))"
+    },
+    {
+      "id": 77,
+      "ast_type": "Literal",
+      "node": "Literal(value='headers: ', literal_type='Str')"
+    },
+    {
+      "id": 78,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "id": 79,
+      "ast_type": "Ident",
+      "node": "Ident(name='r')"
+    },
+    {
+      "id": 80,
+      "ast_type": "Literal",
+      "node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "id": 81,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Map<Any>, name='headers', expr=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), is_const=False)"
+    },
+    {
+      "id": 82,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "id": 83,
+      "ast_type": "Ident",
+      "node": "Ident(name='r')"
+    },
+    {
+      "id": 84,
+      "ast_type": "Literal",
+      "node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "id": 85,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))]))"
+    },
+    {
+      "id": 86,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))])"
+    },
+    {
+      "id": 87,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 88,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))"
+    },
+    {
+      "id": 89,
+      "ast_type": "Literal",
+      "node": "Literal(value='Content-Type: ', literal_type='Str')"
+    },
+    {
+      "id": 90,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str'))"
+    },
+    {
+      "id": 91,
+      "ast_type": "Ident",
+      "node": "Ident(name='headers')"
+    },
+    {
+      "id": 92,
+      "ast_type": "Literal",
+      "node": "Literal(value='Content-Type', literal_type='Str')"
+    },
+    {
+      "id": 93,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))]))"
+    },
+    {
+      "id": 94,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))])"
+    },
+    {
+      "id": 95,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 96,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))"
+    },
+    {
+      "id": 97,
+      "ast_type": "Literal",
+      "node": "Literal(value='Content-Type: ', literal_type='Str')"
+    },
+    {
+      "id": 98,
+      "ast_type": "Index",
+      "node": "Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str'))"
+    },
+    {
+      "id": 99,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "id": 100,
+      "ast_type": "Ident",
+      "node": "Ident(name='r')"
+    },
+    {
+      "id": 101,
+      "ast_type": "Literal",
+      "node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "id": 102,
+      "ast_type": "Literal",
+      "node": "Literal(value='Content-Type', literal_type='Str')"
+    },
+    {
+      "id": 103,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))]))"
+    },
+    {
+      "id": 104,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))])"
+    },
+    {
+      "id": 105,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 106,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))"
+    },
+    {
+      "id": 107,
+      "ast_type": "Literal",
+      "node": "Literal(value='status: ', literal_type='Str')"
+    },
+    {
+      "id": 108,
+      "ast_type": "Index",
+      "node": "Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str'))"
+    },
+    {
+      "id": 109,
+      "ast_type": "Ident",
+      "node": "Ident(name='r')"
+    },
+    {
+      "id": 110,
+      "ast_type": "Literal",
+      "node": "Literal(value='status', literal_type='Str')"
+    },
+    {
+      "id": 111,
+      "ast_type": "VarDecl",
+      "node": "VarDecl(type_spec=Integer, name='destroyed', expr=Call(func=Ident(name='destroy_session'), args=[Ident(name='s')]), is_const=False)"
+    },
+    {
+      "id": 112,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='destroy_session'), args=[Ident(name='s')])"
+    },
+    {
+      "id": 113,
+      "ast_type": "Ident",
+      "node": "Ident(name='destroy_session')"
+    },
+    {
+      "id": 114,
+      "ast_type": "Ident",
+      "node": "Ident(name='s')"
+    },
+    {
+      "id": 115,
+      "ast_type": "IfStmt",
+      "node": "IfStmt(condition=Ident(name='destroyed'), then_block=Block(statements=ExprStmt), else_block=Block(statements=ExprStmt))"
+    },
+    {
+      "id": 116,
+      "ast_type": "Ident",
+      "node": "Ident(name='destroyed')"
+    },
+    {
+      "id": 117,
+      "ast_type": "Block",
+      "node": "Block(statements=ExprStmt)"
+    },
+    {
+      "id": 118,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))]))"
+    },
+    {
+      "id": 119,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))])"
+    },
+    {
+      "id": 120,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 121,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))"
+    },
+    {
+      "id": 122,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))"
+    },
+    {
+      "id": 123,
+      "ast_type": "Literal",
+      "node": "Literal(value='Session ', literal_type='Str')"
+    },
+    {
+      "id": 124,
+      "ast_type": "Ident",
+      "node": "Ident(name='s')"
+    },
+    {
+      "id": 125,
+      "ast_type": "Literal",
+      "node": "Literal(value=' destroyed', literal_type='Str')"
+    },
+    {
+      "id": 126,
+      "ast_type": "Block",
+      "node": "Block(statements=ExprStmt)"
+    },
+    {
+      "id": 127,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))]))"
+    },
+    {
+      "id": 128,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))])"
+    },
+    {
+      "id": 129,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 130,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))"
+    },
+    {
+      "id": 131,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))"
+    },
+    {
+      "id": 132,
+      "ast_type": "Literal",
+      "node": "Literal(value='Session ', literal_type='Str')"
+    },
+    {
+      "id": 133,
+      "ast_type": "Ident",
+      "node": "Ident(name='s')"
+    },
+    {
+      "id": 134,
+      "ast_type": "Literal",
+      "node": "Literal(value=' not destroyed', literal_type='Str')"
+    },
+    {
+      "id": 135,
+      "ast_type": "Block",
+      "node": "Block(statements=ExprStmt)"
+    },
+    {
+      "id": 136,
+      "ast_type": "ExprStmt",
+      "node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))]))"
+    },
+    {
+      "id": 137,
+      "ast_type": "Call",
+      "node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))])"
+    },
+    {
+      "id": 138,
+      "ast_type": "Ident",
+      "node": "Ident(name='print')"
+    },
+    {
+      "id": 139,
+      "ast_type": "BinaryOp",
+      "node": "BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))"
+    },
+    {
+      "id": 140,
+      "ast_type": "Literal",
+      "node": "Literal(value='Oops: ', literal_type='Str')"
+    },
+    {
+      "id": 141,
+      "ast_type": "Ident",
+      "node": "Ident(name='e')"
+    }
+  ],
+  "edges": [
+    {
+      "parent_id": 0,
+      "child_id": 1,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ImportStmt(names=['open_file', 'read_file', 'write_file', 'close_file', 'delete_file'], source='Standard_IO')"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 2,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ImportStmt(names=['print', 'convert_t'], source='Standard')"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 3,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ImportStmt(names=['write_and_close', 'read_and_close'], source='./file_test.bytie')"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 4,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "VarDecl(type_spec=Str, name='data', expr=Literal(value='Here is some multi-line string data:\\nEtc.\\nEtc.\\n\\nABC\\x08\\x08xyz\\x08!😊', literal_type='Str'), is_const=False)"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 6,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')]))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 11,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "VarDecl(type_spec=Str, name='file_data', expr=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]), is_const=False)"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 15,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 19,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])]))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 28,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 34,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 38,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')]))"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 42,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ImportStmt(names=['get', 'create_session', 'destroy_session'], source='Standard_Net')"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 43,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "ImportStmt(names=['print'], source='Standard')"
+    },
+    {
+      "parent_id": 0,
+      "child_id": 44,
+      "parent_node": "Program(body=ImportStmt, ImportStmt, ImportStmt, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ExprStmt, ImportStmt, ImportStmt, AttemptStmt)",
+      "child_node": "AttemptStmt(try_block=Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt), err_name=e, catch_block=Block(statements=ExprStmt))"
+    },
+    {
+      "parent_id": 4,
+      "child_id": 5,
+      "parent_node": "VarDecl(type_spec=Str, name='data', expr=Literal(value='Here is some multi-line string data:\\nEtc.\\nEtc.\\n\\nABC\\x08\\x08xyz\\x08!😊', literal_type='Str'), is_const=False)",
+      "child_node": "Literal(value='Here is some multi-line string data:\\nEtc.\\nEtc.\\n\\nABC\\x08\\x08xyz\\x08!😊', literal_type='Str')"
+    },
+    {
+      "parent_id": 6,
+      "child_id": 7,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')]))",
+      "child_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')])"
+    },
+    {
+      "parent_id": 7,
+      "child_id": 8,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')])",
+      "child_node": "Ident(name='write_and_close')"
+    },
+    {
+      "parent_id": 7,
+      "child_id": 9,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')])",
+      "child_node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "parent_id": 7,
+      "child_id": 10,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Ident(name='data')])",
+      "child_node": "Ident(name='data')"
+    },
+    {
+      "parent_id": 11,
+      "child_id": 12,
+      "parent_node": "VarDecl(type_spec=Str, name='file_data', expr=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]), is_const=False)",
+      "child_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "parent_id": 12,
+      "child_id": 13,
+      "parent_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Ident(name='read_and_close')"
+    },
+    {
+      "parent_id": 12,
+      "child_id": 14,
+      "parent_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "parent_id": 15,
+      "child_id": 16,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))",
+      "child_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])"
+    },
+    {
+      "parent_id": 16,
+      "child_id": 17,
+      "parent_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 16,
+      "child_id": 18,
+      "parent_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])",
+      "child_node": "Ident(name='file_data')"
+    },
+    {
+      "parent_id": 19,
+      "child_id": 20,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])]))",
+      "child_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])])"
+    },
+    {
+      "parent_id": 20,
+      "child_id": 21,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])])",
+      "child_node": "Ident(name='write_and_close')"
+    },
+    {
+      "parent_id": 20,
+      "child_id": 22,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])])",
+      "child_node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "parent_id": 20,
+      "child_id": 23,
+      "parent_node": "Call(func=Ident(name='write_and_close'), args=[Literal(value='file_text.txt', literal_type='Str'), Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])])",
+      "child_node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])"
+    },
+    {
+      "parent_id": 23,
+      "child_id": 24,
+      "parent_node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])",
+      "child_node": "Ident(name='convert_t')"
+    },
+    {
+      "parent_id": 23,
+      "child_id": 25,
+      "parent_node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])",
+      "child_node": "Ident(name='String')"
+    },
+    {
+      "parent_id": 23,
+      "child_id": 26,
+      "parent_node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])",
+      "child_node": "Literal(value=Integer, literal_type='TypeSpec')"
+    },
+    {
+      "parent_id": 23,
+      "child_id": 27,
+      "parent_node": "Call(func=Ident(name='convert_t'), args=[Ident(name='String'), Literal(value=Integer, literal_type='TypeSpec'), Literal(value=234, literal_type='Integer')])",
+      "child_node": "Literal(value=234, literal_type='Integer')"
+    },
+    {
+      "parent_id": 28,
+      "child_id": 29,
+      "parent_node": "ExprStmt(expr=Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])))",
+      "child_node": "Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]))"
+    },
+    {
+      "parent_id": 29,
+      "child_id": 30,
+      "parent_node": "Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]))",
+      "child_node": "Ident(name='file_data')"
+    },
+    {
+      "parent_id": 29,
+      "child_id": 31,
+      "parent_node": "Assign(target=Ident(name='file_data'), value=Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')]))",
+      "child_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "parent_id": 31,
+      "child_id": 32,
+      "parent_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Ident(name='read_and_close')"
+    },
+    {
+      "parent_id": 31,
+      "child_id": 33,
+      "parent_node": "Call(func=Ident(name='read_and_close'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "parent_id": 34,
+      "child_id": 35,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[Ident(name='file_data')]))",
+      "child_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])"
+    },
+    {
+      "parent_id": 35,
+      "child_id": 36,
+      "parent_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 35,
+      "child_id": 37,
+      "parent_node": "Call(func=Ident(name='print'), args=[Ident(name='file_data')])",
+      "child_node": "Ident(name='file_data')"
+    },
+    {
+      "parent_id": 38,
+      "child_id": 39,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')]))",
+      "child_node": "Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')])"
+    },
+    {
+      "parent_id": 39,
+      "child_id": 40,
+      "parent_node": "Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Ident(name='delete_file')"
+    },
+    {
+      "parent_id": 39,
+      "child_id": 41,
+      "parent_node": "Call(func=Ident(name='delete_file'), args=[Literal(value='file_text.txt', literal_type='Str')])",
+      "child_node": "Literal(value='file_text.txt', literal_type='Str')"
+    },
+    {
+      "parent_id": 44,
+      "child_id": 45,
+      "parent_node": "AttemptStmt(try_block=Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt), err_name=e, catch_block=Block(statements=ExprStmt))",
+      "child_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)"
+    },
+    {
+      "parent_id": 44,
+      "child_id": 135,
+      "parent_node": "AttemptStmt(try_block=Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt), err_name=e, catch_block=Block(statements=ExprStmt))",
+      "child_node": "Block(statements=ExprStmt)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 46,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Str, name='s', expr=Call(func=Ident(name='create_session'), args=[MapLit(entries=[])]), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 50,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Integer, name='a', expr=Literal(value=123, literal_type='Integer'), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 52,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Integer, name='b', expr=Ident(name='a'), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 54,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 60,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Map<Any>, name='r', expr=Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')]), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 65,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))]))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 73,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))]))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 81,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Map<Any>, name='headers', expr=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 85,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))]))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 93,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))]))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 103,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))]))"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 111,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "VarDecl(type_spec=Integer, name='destroyed', expr=Call(func=Ident(name='destroy_session'), args=[Ident(name='s')]), is_const=False)"
+    },
+    {
+      "parent_id": 45,
+      "child_id": 115,
+      "parent_node": "Block(statements=VarDecl, VarDecl, VarDecl, ExprStmt, VarDecl, ExprStmt, ExprStmt, VarDecl, ExprStmt, ExprStmt, ExprStmt, VarDecl, IfStmt)",
+      "child_node": "IfStmt(condition=Ident(name='destroyed'), then_block=Block(statements=ExprStmt), else_block=Block(statements=ExprStmt))"
+    },
+    {
+      "parent_id": 46,
+      "child_id": 47,
+      "parent_node": "VarDecl(type_spec=Str, name='s', expr=Call(func=Ident(name='create_session'), args=[MapLit(entries=[])]), is_const=False)",
+      "child_node": "Call(func=Ident(name='create_session'), args=[MapLit(entries=[])])"
+    },
+    {
+      "parent_id": 47,
+      "child_id": 48,
+      "parent_node": "Call(func=Ident(name='create_session'), args=[MapLit(entries=[])])",
+      "child_node": "Ident(name='create_session')"
+    },
+    {
+      "parent_id": 47,
+      "child_id": 49,
+      "parent_node": "Call(func=Ident(name='create_session'), args=[MapLit(entries=[])])",
+      "child_node": "MapLit(entries=[])"
+    },
+    {
+      "parent_id": 50,
+      "child_id": 51,
+      "parent_node": "VarDecl(type_spec=Integer, name='a', expr=Literal(value=123, literal_type='Integer'), is_const=False)",
+      "child_node": "Literal(value=123, literal_type='Integer')"
+    },
+    {
+      "parent_id": 52,
+      "child_id": 53,
+      "parent_node": "VarDecl(type_spec=Integer, name='b', expr=Ident(name='a'), is_const=False)",
+      "child_node": "Ident(name='a')"
+    },
+    {
+      "parent_id": 54,
+      "child_id": 55,
+      "parent_node": "ExprStmt(expr=Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))))",
+      "child_node": "Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer')))"
+    },
+    {
+      "parent_id": 55,
+      "child_id": 56,
+      "parent_node": "Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer')))",
+      "child_node": "Ident(name='b')"
+    },
+    {
+      "parent_id": 55,
+      "child_id": 57,
+      "parent_node": "Assign(target=Ident(name='b'), value=BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer')))",
+      "child_node": "BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))"
+    },
+    {
+      "parent_id": 57,
+      "child_id": 58,
+      "parent_node": "BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))",
+      "child_node": "Ident(name='a')"
+    },
+    {
+      "parent_id": 57,
+      "child_id": 59,
+      "parent_node": "BinaryOp(op='+', left=Ident(name='a'), right=Literal(value=1, literal_type='Integer'))",
+      "child_node": "Literal(value=1, literal_type='Integer')"
+    },
+    {
+      "parent_id": 60,
+      "child_id": 61,
+      "parent_node": "VarDecl(type_spec=Map<Any>, name='r', expr=Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')]), is_const=False)",
+      "child_node": "Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')])"
+    },
+    {
+      "parent_id": 61,
+      "child_id": 62,
+      "parent_node": "Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')])",
+      "child_node": "Ident(name='get')"
+    },
+    {
+      "parent_id": 61,
+      "child_id": 63,
+      "parent_node": "Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')])",
+      "child_node": "Literal(value='http://news.ycombinator.com', literal_type='Str')"
+    },
+    {
+      "parent_id": 61,
+      "child_id": 64,
+      "parent_node": "Call(func=Ident(name='get'), args=[Literal(value='http://news.ycombinator.com', literal_type='Str'), Ident(name='s')])",
+      "child_node": "Ident(name='s')"
+    },
+    {
+      "parent_id": 65,
+      "child_id": 66,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))])"
+    },
+    {
+      "parent_id": 66,
+      "child_id": 67,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 66,
+      "child_id": 68,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))"
+    },
+    {
+      "parent_id": 68,
+      "child_id": 69,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))",
+      "child_node": "Literal(value='body: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 68,
+      "child_id": 70,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='body: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str')))",
+      "child_node": "Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str'))"
+    },
+    {
+      "parent_id": 70,
+      "child_id": 71,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str'))",
+      "child_node": "Ident(name='r')"
+    },
+    {
+      "parent_id": 70,
+      "child_id": 72,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='body', literal_type='Str'))",
+      "child_node": "Literal(value='body', literal_type='Str')"
+    },
+    {
+      "parent_id": 73,
+      "child_id": 74,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))])"
+    },
+    {
+      "parent_id": 74,
+      "child_id": 75,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 74,
+      "child_id": 76,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))"
+    },
+    {
+      "parent_id": 76,
+      "child_id": 77,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))",
+      "child_node": "Literal(value='headers: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 76,
+      "child_id": 78,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='headers: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')))",
+      "child_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "parent_id": 78,
+      "child_id": 79,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Ident(name='r')"
+    },
+    {
+      "parent_id": 78,
+      "child_id": 80,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "parent_id": 81,
+      "child_id": 82,
+      "parent_node": "VarDecl(type_spec=Map<Any>, name='headers', expr=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), is_const=False)",
+      "child_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "parent_id": 82,
+      "child_id": 83,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Ident(name='r')"
+    },
+    {
+      "parent_id": 82,
+      "child_id": 84,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "parent_id": 85,
+      "child_id": 86,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))])"
+    },
+    {
+      "parent_id": 86,
+      "child_id": 87,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 86,
+      "child_id": 88,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))"
+    },
+    {
+      "parent_id": 88,
+      "child_id": 89,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))",
+      "child_node": "Literal(value='Content-Type: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 88,
+      "child_id": 90,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str')))",
+      "child_node": "Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str'))"
+    },
+    {
+      "parent_id": 90,
+      "child_id": 91,
+      "parent_node": "Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str'))",
+      "child_node": "Ident(name='headers')"
+    },
+    {
+      "parent_id": 90,
+      "child_id": 92,
+      "parent_node": "Index(target=Ident(name='headers'), index=Literal(value='Content-Type', literal_type='Str'))",
+      "child_node": "Literal(value='Content-Type', literal_type='Str')"
+    },
+    {
+      "parent_id": 93,
+      "child_id": 94,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))])"
+    },
+    {
+      "parent_id": 94,
+      "child_id": 95,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 94,
+      "child_id": 96,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))"
+    },
+    {
+      "parent_id": 96,
+      "child_id": 97,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))",
+      "child_node": "Literal(value='Content-Type: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 96,
+      "child_id": 98,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Content-Type: ', literal_type='Str'), right=Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str')))",
+      "child_node": "Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str'))"
+    },
+    {
+      "parent_id": 98,
+      "child_id": 99,
+      "parent_node": "Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str'))",
+      "child_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))"
+    },
+    {
+      "parent_id": 98,
+      "child_id": 102,
+      "parent_node": "Index(target=Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str')), index=Literal(value='Content-Type', literal_type='Str'))",
+      "child_node": "Literal(value='Content-Type', literal_type='Str')"
+    },
+    {
+      "parent_id": 99,
+      "child_id": 100,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Ident(name='r')"
+    },
+    {
+      "parent_id": 99,
+      "child_id": 101,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='headers', literal_type='Str'))",
+      "child_node": "Literal(value='headers', literal_type='Str')"
+    },
+    {
+      "parent_id": 103,
+      "child_id": 104,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))])"
+    },
+    {
+      "parent_id": 104,
+      "child_id": 105,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 104,
+      "child_id": 106,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))"
+    },
+    {
+      "parent_id": 106,
+      "child_id": 107,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))",
+      "child_node": "Literal(value='status: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 106,
+      "child_id": 108,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='status: ', literal_type='Str'), right=Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str')))",
+      "child_node": "Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str'))"
+    },
+    {
+      "parent_id": 108,
+      "child_id": 109,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str'))",
+      "child_node": "Ident(name='r')"
+    },
+    {
+      "parent_id": 108,
+      "child_id": 110,
+      "parent_node": "Index(target=Ident(name='r'), index=Literal(value='status', literal_type='Str'))",
+      "child_node": "Literal(value='status', literal_type='Str')"
+    },
+    {
+      "parent_id": 111,
+      "child_id": 112,
+      "parent_node": "VarDecl(type_spec=Integer, name='destroyed', expr=Call(func=Ident(name='destroy_session'), args=[Ident(name='s')]), is_const=False)",
+      "child_node": "Call(func=Ident(name='destroy_session'), args=[Ident(name='s')])"
+    },
+    {
+      "parent_id": 112,
+      "child_id": 113,
+      "parent_node": "Call(func=Ident(name='destroy_session'), args=[Ident(name='s')])",
+      "child_node": "Ident(name='destroy_session')"
+    },
+    {
+      "parent_id": 112,
+      "child_id": 114,
+      "parent_node": "Call(func=Ident(name='destroy_session'), args=[Ident(name='s')])",
+      "child_node": "Ident(name='s')"
+    },
+    {
+      "parent_id": 115,
+      "child_id": 116,
+      "parent_node": "IfStmt(condition=Ident(name='destroyed'), then_block=Block(statements=ExprStmt), else_block=Block(statements=ExprStmt))",
+      "child_node": "Ident(name='destroyed')"
+    },
+    {
+      "parent_id": 115,
+      "child_id": 117,
+      "parent_node": "IfStmt(condition=Ident(name='destroyed'), then_block=Block(statements=ExprStmt), else_block=Block(statements=ExprStmt))",
+      "child_node": "Block(statements=ExprStmt)"
+    },
+    {
+      "parent_id": 115,
+      "child_id": 126,
+      "parent_node": "IfStmt(condition=Ident(name='destroyed'), then_block=Block(statements=ExprStmt), else_block=Block(statements=ExprStmt))",
+      "child_node": "Block(statements=ExprStmt)"
+    },
+    {
+      "parent_id": 117,
+      "child_id": 118,
+      "parent_node": "Block(statements=ExprStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))]))"
+    },
+    {
+      "parent_id": 118,
+      "child_id": 119,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))])"
+    },
+    {
+      "parent_id": 119,
+      "child_id": 120,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 119,
+      "child_id": 121,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))])",
+      "child_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))"
+    },
+    {
+      "parent_id": 121,
+      "child_id": 122,
+      "parent_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))",
+      "child_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))"
+    },
+    {
+      "parent_id": 121,
+      "child_id": 125,
+      "parent_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' destroyed', literal_type='Str'))",
+      "child_node": "Literal(value=' destroyed', literal_type='Str')"
+    },
+    {
+      "parent_id": 122,
+      "child_id": 123,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))",
+      "child_node": "Literal(value='Session ', literal_type='Str')"
+    },
+    {
+      "parent_id": 122,
+      "child_id": 124,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))",
+      "child_node": "Ident(name='s')"
+    },
+    {
+      "parent_id": 126,
+      "child_id": 127,
+      "parent_node": "Block(statements=ExprStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))]))"
+    },
+    {
+      "parent_id": 127,
+      "child_id": 128,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))])"
+    },
+    {
+      "parent_id": 128,
+      "child_id": 129,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 128,
+      "child_id": 130,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))])",
+      "child_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))"
+    },
+    {
+      "parent_id": 130,
+      "child_id": 131,
+      "parent_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))",
+      "child_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))"
+    },
+    {
+      "parent_id": 130,
+      "child_id": 134,
+      "parent_node": "BinaryOp(op='+', left=BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s')), right=Literal(value=' not destroyed', literal_type='Str'))",
+      "child_node": "Literal(value=' not destroyed', literal_type='Str')"
+    },
+    {
+      "parent_id": 131,
+      "child_id": 132,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))",
+      "child_node": "Literal(value='Session ', literal_type='Str')"
+    },
+    {
+      "parent_id": 131,
+      "child_id": 133,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Session ', literal_type='Str'), right=Ident(name='s'))",
+      "child_node": "Ident(name='s')"
+    },
+    {
+      "parent_id": 135,
+      "child_id": 136,
+      "parent_node": "Block(statements=ExprStmt)",
+      "child_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))]))"
+    },
+    {
+      "parent_id": 136,
+      "child_id": 137,
+      "parent_node": "ExprStmt(expr=Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))]))",
+      "child_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))])"
+    },
+    {
+      "parent_id": 137,
+      "child_id": 138,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))])",
+      "child_node": "Ident(name='print')"
+    },
+    {
+      "parent_id": 137,
+      "child_id": 139,
+      "parent_node": "Call(func=Ident(name='print'), args=[BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))])",
+      "child_node": "BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))"
+    },
+    {
+      "parent_id": 139,
+      "child_id": 140,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))",
+      "child_node": "Literal(value='Oops: ', literal_type='Str')"
+    },
+    {
+      "parent_id": 139,
+      "child_id": 141,
+      "parent_node": "BinaryOp(op='+', left=Literal(value='Oops: ', literal_type='Str'), right=Ident(name='e'))",
+      "child_node": "Ident(name='e')"
+    }
+  ],
+  "start": 0,
+  "end": 141
+}

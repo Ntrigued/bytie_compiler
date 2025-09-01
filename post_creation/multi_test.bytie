@@ -1,18 +1,6 @@
 retrieve open_file, read_file, write_file, close_file, delete_file from Standard_IO;
 retrieve print, convert_t from Standard;
-
-function write_and_close(String filename, String data) -> None {
-  Integer file_no = open_file(filename, 'w');
-  write_file(file_no, data);
-  close_file(file_no);
-}
-
-function read_and_close(String filename) -> String {
-  Integer file_no = open_file(filename, 'r');
-  String data = read_file(file_no);
-  close_file(file_no);
-  return data;
-}
+retrieve write_and_close, read_and_close from "./file_test.bytie";
 
 String data = "Here is some multi-line string data:\nEtc.\nEtc.\n\nABC\b\bxyz\b!😊";
 write_and_close('file_text.txt', data);
@@ -31,6 +19,9 @@ retrieve print from Standard;
 
 attempt {
     String s = create_session({});
+    Integer a = 123;
+    Integer b = a;
+    b = a + 1;
     Map<Any> r = get('http://news.ycombinator.com', s);
     print("body: " + r['body']);
     print('headers: ' + r["headers"]);

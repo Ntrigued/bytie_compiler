@@ -26,8 +26,8 @@ print(file_data);
 delete_file("file_text.txt");
 
 
-print(list_files("./"));
-Array<Integer> files = list_files("./");
+print(list_files("/"));
+Array<String> files = list_files("./");
 for(Integer count = 0; count < len(files); count = count + 1) {
   print(files[count]);
 }

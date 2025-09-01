@@ -33,6 +33,7 @@ def main(argv: list[str] | None = None) -> None:
     group.add_argument('--emit-ast', metavar='BYTIE_FILE', help='emit AST JSON for the given .bytie file')
     group.add_argument('--ast', metavar='AST_JSON_FILE', help='execute AST from a JSON file')
     group.add_argument('--emit-bytecode', metavar='AST_JSON_FILE', help='emit BBC1 bytecode for the given AST JSON file')
+    group.add_argument('--emit-cfg', metavar='AST_OR_SOURCE', help='emit CFG JSON for the given AST or source file')
     group.add_argument('--bytecode', metavar='BYTECODE_FILE', help='execute BBC1 bytecode file')
     parser.add_argument('program', nargs='?', help='Bytie program file (.bytie) to execute')
     args = parser.parse_args(argv)
@@ -74,6 +75,54 @@ def main(argv: list[str] | None = None) -> None:
         except BytieError as e:
             print(f"Runtime error: {e}", file=sys.stderr)
             sys.exit(1)
+        return
+
+    # Emit CFG mode
+    if args.emit_cfg:
+        input_path = Path(args.emit_cfg)
+        if not input_path.exists():
+            print(f"Error: file {input_path} not found", file=sys.stderr)
+            sys.exit(1)
+
+        name = input_path.name
+        # Determine if input is AST JSON (.ast.json suffix)
+        is_ast_json = name.endswith('.ast.json')
+        if is_ast_json:
+            with open(input_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            ast_obj = ast_from_obj(data)
+        else:
+            # Parse source file (.bytie)
+            with open(input_path, 'r', encoding='utf-8') as f:
+                source = f.read()
+            ast_obj = parse_program(source)
+
+        # Build the CFG and serialize
+        from .cfg.cfg import CFGBuilder, cfg_to_obj
+        cfg_obj = cfg_to_obj(CFGBuilder(ast_obj).build())
+
+        # Determine output path (.bytie.cfg.json)
+        if name.endswith('.bytie.ast.json'):
+            base = name[:-len('.bytie.ast.json')]
+            out_name = base + '.bytie.cfg.json'
+            out_path = input_path.with_name(out_name)
+        elif name.endswith('.ast.json'):
+            base = name[:-len('.ast.json')]
+            out_name = base + '.bytie.cfg.json'
+            out_path = input_path.with_name(out_name)
+        elif name.endswith('.bytie'):
+            base = name[:-len('.bytie')]
+            out_name = base + '.bytie.cfg.json'
+            out_path = input_path.with_name(out_name)
+        else:
+            if input_path.suffix:
+                out_path = input_path.with_name(input_path.stem + '.bytie.cfg.json')
+            else:
+                out_path = input_path.with_name(name + '.bytie.cfg.json')
+
+        with open(out_path, 'w', encoding='utf-8') as out:
+            json.dump(cfg_obj, out, ensure_ascii=False, indent=2)
+        print(str(out_path))
         return
 
     # Emit Bytecode mode

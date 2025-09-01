@@ -23,6 +23,9 @@ class Node:
 class Program(Node):
     body: List[Node]
 
+    def __str__(self) -> str:
+        body_str = ", ".join(str(n.__class__.__name__) for n in self.body)
+        return f"Program(body={body_str})"
 
 @dataclass
 class ImportStmt(Node):
@@ -51,10 +54,19 @@ class FuncDecl(Node):
     return_type: TypeSpec
     body: 'Block'
 
+    def __str__(self) -> str:
+        body_str = ", ".join(str(n.__class__.__name__) for n in self.body.statements)
+        return f"FuncDecl(name={self.name}, params={self.params}, " \
+               f"return_type={self.return_type}, body={body_str})"
+
 
 @dataclass
 class Block(Node):
     statements: List[Node]
+
+    def __str__(self) -> str:
+        statements_str = ", ".join(str(n.__class__.__name__) for n in self.statements)
+        return f"Block(statements={statements_str})"
 
 
 @dataclass
@@ -63,11 +75,18 @@ class IfStmt(Node):
     then_block: Block
     else_block: Optional[Block]
 
+    def __str__(self) -> str:
+        return f"IfStmt(condition={self.condition}, then_block={self.then_block}, else_block={self.else_block})"
+
 
 @dataclass
 class WhileStmt(Node):
     condition: Node
     body: Block
+
+    def __str__(self) -> str:
+        return f"WhileStmt(condition={self.condition}, body={self.body})"
+
 
 
 @dataclass
@@ -77,6 +96,9 @@ class ForStmt(Node):
     post: Optional[Node]
     body: Block
 
+    def __str__(self) -> str:
+        return f"ForStmt(init={self.init}, condition={self.condition}, post={self.post}, body={self.body})"
+
 
 @dataclass
 class AttemptStmt(Node):
@@ -84,11 +106,13 @@ class AttemptStmt(Node):
     err_name: str
     catch_block: Block
 
+    def __str__(self) -> str:
+        return f"AttemptStmt(try_block={self.try_block}, err_name={self.err_name}, catch_block={self.catch_block})"
+
 
 @dataclass
 class ReturnStmt(Node):
     value: Optional[Node]
-
 
 @dataclass
 class ExprStmt(Node):
